@@ -171,9 +171,6 @@
       <HintPath>..\_references\WindowsAzure.Messaging.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows" />
-    <Reference Include="SatelliteMenu">
-      <HintPath>..\Components\satellite-menu-1.1\lib\ios\SatelliteMenu.dll</HintPath>
-    </Reference>
     <Reference Include="ShinobiEssentials">
       <HintPath>..\Components\ShinobiEssentials-2.5.1-trial\lib\ios\ShinobiEssentials.dll</HintPath>
     </Reference>
@@ -228,7 +225,6 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
     <XamarinComponentReference Include="ShinobiEssentials-trial">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>2.5.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
@@ -245,6 +241,14 @@
     <BundleResource Include="Resources\appicon-Small%402x.png" />
     <BundleResource Include="Resources\appicon.png" />
     <BundleResource Include="Resources\background%402x.png" />
+    <BundleResource Include="Resources\bg2.png" />
+    <BundleResource Include="Resources\round%402x.png" />
+    <BundleResource Include="Resources\video%402x.png" />
+    <BundleResource Include="Resources\SunnyText%402x.png" />
+    <BundleResource Include="Resources\earth%402x.png" />
+    <BundleResource Include="Resources\sun%402x.png" />
+    <BundleResource Include="Resources\moon%402x.png" />
+    <BundleResource Include="Resources\mars%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />

@@ -48,9 +48,10 @@ namespace Sunny.iOS.Views
                     {                    
                         var missionView = new UIButton(UIButtonType.System);
                         missionView.SetTitle(mission.Name, UIControlState.Normal);
-                        missionView.Frame = new RectangleF(mission.X, mission.Y, 300, 40);
+                        missionView.Frame = new RectangleF(mission.X, mission.Y, 100, 40);
                         missionView.BackgroundColor = UIColor.Clear;
-                        missionView.Layer.BorderColor = UIColor.Blue.CGColor;
+                        missionView.SetTitleColor(UIColor.FromRGBA(0.537f, 0.816f, 0.992f, 1.000f), UIControlState.Normal);
+                        missionView.Layer.BorderColor = UIColor.FromRGBA(0.008f, 0.137f, 0.620f, 1.000f).CGColor;
                         missionView.Layer.CornerRadius = 4;
                         missionView.Layer.BorderWidth = 1;
                     
@@ -67,18 +68,15 @@ namespace Sunny.iOS.Views
 
         void AddSateliteMenu()
         {
-            var image = UIImage.FromBundle("menu.png");
-            var yPos = View.Frame.Height - image.Size.Height - 10;
-            var frame = new RectangleF(10, yPos, 30, 30);
+            var image = UIImage.FromBundle("sun.png");
+            var yPos = View.Frame.Height - 100 - 10;
+            var frame = new RectangleF(10, yPos, 100, 100);
 
             var items = new []
             { 
-                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 1, "Search"),
-                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 2, "Update"),
-                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 3, "Share"),
-                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 4, "Post"),
-                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 5, "Reload"),
-                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 6, "Settingd")
+                new SatelliteMenuButtonItem(UIImage.FromBundle("moon.png"), 1, "About"),
+                new SatelliteMenuButtonItem(UIImage.FromBundle("earth.png"), 2, "About"),
+                new SatelliteMenuButtonItem(UIImage.FromBundle("mars.png"), 3, "About"),
             };
 
             var button = new SatelliteMenuButton(View, image, items, frame);
