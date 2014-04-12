@@ -1,8 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Cirrious.CrossCore;
 using Sunny.Core.Services.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
+using Sunny.Core.Utils;
 
 namespace Sunny.Core.Business
 {
@@ -12,8 +14,13 @@ namespace Sunny.Core.Business
 
         public static async Task<IList<Domain.Mission>> GetMissions()
         {
-            _missions = await Mvx.Resolve<IMissionService>().GetMissions();  
-            return _missions;
+            return await Retry.DoAsync(async () =>
+            {
+
+                _missions = await Mvx.Resolve<IMissionService>().GetMissions();
+                return _missions;
+
+            }, new TimeSpan(0,0,0,3));
         }
 
         public static async Task<Domain.Mission> GetMission(int id)

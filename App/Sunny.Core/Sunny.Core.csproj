@@ -38,6 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Business\News.cs" />
     <Compile Include="Converters\InverseBooleanConverter.cs" />
     <Compile Include="Domain\Enums\ELocalizedLanguageCode.cs" />
     <Compile Include="Domain\Enums\EMediaType.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="Services\CustomServiceBindings.cs" />
     <Compile Include="Services\LoggingService.cs" />
     <Compile Include="Services\ServiceBindings.cs" />
+    <Compile Include="Utils\Retry.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="Business\Language.cs" />
     <Compile Include="Observable\ObservableBase.cs" />

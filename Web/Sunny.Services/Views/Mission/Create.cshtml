@@ -37,7 +37,7 @@
             @Html.LabelFor(model => model.Date, new { @class = "control-label col-md-2" })
             <div class="col-sm-3">
                 <div class="input-group">
-                    <input value="@Model.Date" name="Date" class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" />
+                    <input value="@DateTime.Now.ToString("dd-MM-yyyy")" name="Date" class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" />
                     <span class="input-group-addon">
                         <i class="icon-calendar bigger-110"></i>
                     </span>
@@ -198,7 +198,7 @@
                     </div>
                     <input id="voiceBtn" type="text" x-webkit-speech="" data-edit="inserttext" style="display: none;">
                 </div>
-                <div id="editor" style="overflow: scroll; height: 300px; max-height: 300px; border: 1px solid black;">@Html.Raw(Model.Text)</div>
+                <div id="editor" style="overflow: scroll; height: 300px; max-height: 300px; border: 1px solid black;"></div>
 
                 @Html.TextAreaFor(model => model.Text, new { style = "display:none; visibility:hidden" })
                 @Html.ValidationMessageFor(model => model.Text)

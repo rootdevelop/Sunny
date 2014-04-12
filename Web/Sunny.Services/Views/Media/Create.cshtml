@@ -192,7 +192,7 @@
                     </div>
                     <input id="voiceBtn" type="text" x-webkit-speech="" data-edit="inserttext" style="display: none;">
                 </div>
-                <div id="editor" style="overflow: scroll; height: 300px; max-height: 300px; border: 1px solid black;">@Html.Raw(Model.Description)</div>
+                <div id="editor" style="overflow: scroll; height: 300px; max-height: 300px; border: 1px solid black;"></div>
 
                 @Html.TextAreaFor(model => model.Description, new { style = "display:none; visibility:hidden" })
                 @Html.ValidationMessageFor(model => model.Description)

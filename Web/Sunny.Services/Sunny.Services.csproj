@@ -157,8 +157,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\AnnouncementController.cs" />
     <Compile Include="Api\MediaController.cs" />
     <Compile Include="Api\MissionController.cs" />
+    <Compile Include="Api\NewsController.cs" />
     <Compile Include="Api\SunnyController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
