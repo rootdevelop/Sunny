@@ -36,7 +36,7 @@ namespace Sunny.Core
             CustomTextProvider.InitializeAndCreateBuilder(GetType().Assembly, "AppResources/Text", "Sunny", "Shared");
             Business.Language.SetLocalLanguage(_culture);
 
-            RegisterAppStart<ViewModels.MainViewModel>();
+            RegisterAppStart<ViewModels.EarthViewModel>();
         }
     }
 }

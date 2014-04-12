@@ -180,11 +180,6 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="Views\MainView.cs" />
-    <Compile Include="Views\HomeViewView.cs" />
-    <Compile Include="Views\HomeViewView.designer.cs">
-      <DependentUpon>HomeViewView.cs</DependentUpon>
-    </Compile>
     <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
@@ -192,6 +187,14 @@
     <Compile Include="Bootstrap\JsonLocalisationPluginBootstrap.cs" />
     <Compile Include="Bootstrap\ResourceLoaderPluginBootstrap.cs" />
     <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+    <Compile Include="Views\EarthView.cs" />
+    <Compile Include="Views\EarthView.designer.cs">
+      <DependentUpon>EarthView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MissionView.cs" />
+    <Compile Include="Views\MissionView.designer.cs">
+      <DependentUpon>MissionView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
@@ -200,14 +203,18 @@
       <Name>Sunny.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="Views\HomeViewView.xib" />
-  </ItemGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <ItemGroup>
     <XamarinComponentReference Include="azure-mobile-services">
       <Version>1.2.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\EarthView.xib" />
+    <InterfaceDefinition Include="Views\MissionView.xib" />
   </ItemGroup>
 </Project>
