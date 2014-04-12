@@ -126,8 +126,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Views\EarthView.xaml.cs">
+      <DependentUpon>EarthView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MissionView.xaml.cs">
+      <DependentUpon>MissionView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +148,15 @@
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\SunnyApp_150x150.png" />
+    <Content Include="Assets\SunnyApp_24x24.scale-100.png" />
+    <Content Include="Assets\SunnyApp_30x30.png" />
+    <Content Include="Assets\SunnyApp_310x150.scale-100.png" />
+    <Content Include="Assets\SunnyApp_310x310.scale-100.png" />
+    <Content Include="Assets\SunnyApp_50x50.png" />
+    <Content Include="Assets\SunnyApp_620x300.png" />
+    <Content Include="Assets\SunnyApp_70x70.scale-100.png" />
+    <Content Include="Assets\SunnyApp_800x800 %28org%29.png" />
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -161,9 +176,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\EarthView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MissionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

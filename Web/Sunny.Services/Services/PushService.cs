@@ -24,8 +24,7 @@ namespace Sunny.Services.Services
             NotificationHubClient hub = NotificationHubClient.CreateClientFromConnectionString(WebConfigurationManager.AppSettings["PushEndpoint"], "spacechallenge");
             
             // Send iOS Push Notifications
-            var alertTemplate = "{\"aps\":{\"alert\":\"{0}\"}}";
-            var alert = String.Format(alertTemplate, message);
+            var alert = "{\"aps\":{\"alert\":\"" + message + "\"}}";
             await hub.SendAppleNativeNotificationAsync(alert);
 
             // Send Windows Store Push Notifications

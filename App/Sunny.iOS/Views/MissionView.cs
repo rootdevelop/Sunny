@@ -4,7 +4,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Views;
 
-namespace Sunny.iOS
+namespace Sunny.iOS.Views
 {
     public partial class MissionView : MvxViewController
     {
