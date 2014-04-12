@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows.Input;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace Sunny.Core.ViewModels
 {
@@ -6,6 +8,14 @@ namespace Sunny.Core.ViewModels
     {
         public AboutViewModel()
         {
+        }
+
+        public ICommand GoBackCommand
+        {
+            get
+            {
+                return new MvxCommand(() => Close(this));
+            }
         }
     }
 }

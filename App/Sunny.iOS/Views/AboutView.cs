@@ -2,10 +2,13 @@
 using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Cirrious.MvvmCross.Touch.Views;
+using Cirrious.MvvmCross.Binding.BindingContext;
+using Sunny.Core.ViewModels;
 
-namespace Sunny.iOS
+namespace Sunny.iOS.Views
 {
-    public partial class AboutView : UIViewController
+    public partial class AboutView : MvxViewController
     {
         public AboutView() : base("AboutView", null)
         {
@@ -24,6 +27,10 @@ namespace Sunny.iOS
             base.ViewDidLoad();
 			
             // Perform any additional setup after loading the view, typically from a nib.
+            
+            var set = this.CreateBindingSet<AboutView, AboutViewModel>();
+            set.Bind(backButton).To("GoBackCommand"); 
+            set.Apply();
         }
     }
 }

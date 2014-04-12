@@ -194,7 +194,6 @@
     <Compile Include="Bootstrap\JsonLocalisationPluginBootstrap.cs" />
     <Compile Include="Bootstrap\ResourceLoaderPluginBootstrap.cs" />
     <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
-    <Compile Include="Views\EarthView.cs" />
     <Compile Include="Views\EarthView.designer.cs">
       <DependentUpon>EarthView.cs</DependentUpon>
     </Compile>
@@ -206,6 +205,7 @@
     <Compile Include="Views\AboutView.designer.cs">
       <DependentUpon>AboutView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\EarthView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
@@ -231,9 +231,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <InterfaceDefinition Include="Views\EarthView.xib" />
     <InterfaceDefinition Include="Views\MissionView.xib" />
     <InterfaceDefinition Include="Views\AboutView.xib" />
+    <InterfaceDefinition Include="Views\EarthView.xib" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

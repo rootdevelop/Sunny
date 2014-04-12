@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EarthView">
             <connections>
+                <outlet property="aboutButton" destination="x8X-3G-Rzh" id="a23-yT-XOg"/>
+                <outlet property="liveStreamsButton" destination="d5T-OB-1uZ" id="NJG-cR-YZG"/>
+                <outlet property="newsButton" destination="vWO-xf-I2a" id="U7W-eV-SGz"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -14,38 +17,38 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2.png" id="nni-5F-SDc">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2.png" id="ATH-lC-Aba">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SunnyText.png" id="0mg-yP-cvM">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SunnyText.png" id="ate-4s-I7M">
                     <rect key="frame" x="256" y="29" width="512" height="205"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LSJ-Jg-ghG">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vWO-xf-I2a">
                     <rect key="frame" x="0.0" y="188" width="250" height="54"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.0895200242830856" green="0.27332785470156545" blue="0.47297512755102045" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.089520024279999999" green="0.27332785469999998" blue="0.47297512759999999" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                     <state key="normal" title="     News">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Atr-gC-hob">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d5T-OB-1uZ">
                     <rect key="frame" x="0.0" y="258" width="291" height="54"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.12604171967786204" green="0.38483806409059956" blue="0.66593590561224492" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.1260417197" green="0.38483806409999999" blue="0.66593590560000004" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                    <state key="normal" title="     Announcements">
+                    <state key="normal" title="     Live stream">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UUk-rG-Irk">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x8X-3G-Rzh">
                     <rect key="frame" x="0.0" y="329" width="210" height="54"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.17291005365192511" green="0.53340379651738001" blue="0.9432198660714286" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.17291005370000001" green="0.53340379650000003" blue="0.94321986609999997" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                     <state key="normal" title="     About">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
