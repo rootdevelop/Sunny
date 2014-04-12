@@ -174,3 +174,4 @@ UpgradeLog*.htm
 FakesAssemblies/
 /App/Components
 /App/*.userprefs
+/App/*.userprefs
