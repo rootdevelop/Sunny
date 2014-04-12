@@ -15,7 +15,7 @@ namespace Sunny.Services.Services
         /// </summary>
         /// <param name="message">Push message (max 107 characters)</param>
         /// <returns></returns>
-        public async Task SendNotification(string message)
+        public static async Task SendNotification(string message)
         {
             if (message.Length > 107)
                 throw new Exception("Message lenght exceeds 107 characters");

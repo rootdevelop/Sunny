@@ -197,6 +197,7 @@
     <Compile Include="Domain\Enums\EMediaType.cs" />
     <Compile Include="Domain\Media.cs" />
     <Compile Include="Domain\Mission.cs" />
+    <Compile Include="Domain\PushModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -332,6 +333,8 @@
     <Content Include="Views\Mission\Edit.cshtml" />
     <Content Include="Views\Mission\Index.cshtml" />
     <Content Include="Scripts\jquery-2.1.0.min.map" />
+    <Content Include="Views\Home\Yeeeey.cshtml" />
+    <Content Include="Views\Home\SendPush.cshtml" />
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

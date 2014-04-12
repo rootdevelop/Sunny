@@ -12,19 +12,10 @@
             @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Text)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Location)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Tags)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ThumbnailUri)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageUri)
         </th>
         <th></th>
     </tr>
@@ -39,19 +30,10 @@
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Text)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Tags)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ThumbnailUri)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageUri)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
