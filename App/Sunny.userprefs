@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BaseProject.Core/App.cs">
+    <Files>
+      <File FileName="BaseProject.iOS/AppDelegate.cs" Line="42" Column="1" />
+      <File FileName="BaseProject.Droid/SplashScreen.cs" Line="1" Column="1" />
+      <File FileName="BaseProject.Droid/Setup.cs" Line="37" Column="1" />
+      <File FileName="BaseProject.Droid/Views/HomeView.cs" Line="1" Column="1" />
+      <File FileName="BaseProject.Core/ViewModels/MainViewModel.cs" Line="1" Column="1" />
+      <File FileName="BaseProject.Core/App.cs" Line="33" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.BaseProject.Droid MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
+</Properties>
