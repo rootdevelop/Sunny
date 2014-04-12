@@ -51,6 +51,7 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Business\Language.cs" />
     <Compile Include="Observable\ObservableBase.cs" />
+    <Compile Include="Constants.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">

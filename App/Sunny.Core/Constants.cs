@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Sunny.iOS
+namespace Sunny.Core
 {
-    public class Constants
+    public static class Constants
     {
         public const string ConnectionString = "Endpoint=sb://rootdevelop.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=/0/ttTrjvfS0iPcQtT/UsOtxDkR4BYCndkhvXjox2cU=";
         public const string NotificationHubPath = "spacechallenge";

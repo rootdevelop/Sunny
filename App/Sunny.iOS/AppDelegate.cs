@@ -46,7 +46,7 @@ namespace Sunny.iOS
 
         public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
         {
-            Hub = new SBNotificationHub(Constants.ConnectionString, Constants.NotificationHubPath);
+            Hub = new SBNotificationHub(Core.Constants.ConnectionString, Core.Constants.NotificationHubPath);
 
             Hub.UnregisterAllAsync(deviceToken, (error) =>
             {
