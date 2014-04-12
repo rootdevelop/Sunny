@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3665A7
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Sunny.Services.Azure", "Sunny.Services.Azure\Sunny.Services.Azure.ccproj", "{D20114C8-4060-4913-884E-29D9EC9F426A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{E83CF4AF-6F9E-48B3-8E1B-45F4E457BC3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E83CF4AF-6F9E-48B3-8E1B-45F4E457BC3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E83CF4AF-6F9E-48B3-8E1B-45F4E457BC3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20114C8-4060-4913-884E-29D9EC9F426A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20114C8-4060-4913-884E-29D9EC9F426A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20114C8-4060-4913-884E-29D9EC9F426A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20114C8-4060-4913-884E-29D9EC9F426A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
