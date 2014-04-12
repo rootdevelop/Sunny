@@ -1,94 +1,85 @@
 ﻿@model Sunny.Services.Domain.Media
 
-<!DOCTYPE html>
+<div>
+    <h4>Media</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Mission.Name)
+        </dt>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-    <div>
-        <h4>Media</h4>
-    	<hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Mission.Name)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Mission.Name)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.ThumbnailUri)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.ThumbnailUri)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.ImageUri)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.ImageUri)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Description)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Description)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Title)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Title)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Date)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Date)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Location)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Location)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.Tags)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.Tags)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.MediaType)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.MediaType)
-            </dd>
-    
-        </dl>
-    </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-</body>
-</html>
+        <dd>
+            @Html.DisplayFor(model => model.Mission.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThumbnailUri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThumbnailUri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageUri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageUri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tags)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tags)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MediaType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MediaType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
