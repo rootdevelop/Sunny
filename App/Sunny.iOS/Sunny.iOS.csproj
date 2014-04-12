@@ -171,6 +171,9 @@
     <Reference Include="SatelliteMenu">
       <HintPath>..\Components\satellite-menu-1.1\lib\ios\SatelliteMenu.dll</HintPath>
     </Reference>
+    <Reference Include="ShinobiEssentials">
+      <HintPath>..\Components\ShinobiEssentials-2.5.1-trial\lib\ios\ShinobiEssentials.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -214,8 +217,12 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
     <XamarinComponentReference Include="satellite-menu">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>1.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="ShinobiEssentials-trial">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>2.5.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

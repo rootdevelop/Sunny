@@ -7,6 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MissionView">
             <connections>
                 <outlet property="backButton" destination="QDq-zF-ZTZ" id="wFk-Gk-hl8"/>
+                <outlet property="pageControlHead" destination="Aui-eX-Mbc" id="YWO-ub-fu6"/>
+                <outlet property="scrollViewHead" destination="b7e-21-752" id="Uh9-yL-xXz"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -22,6 +24,14 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="Aui-eX-Mbc">
+                    <rect key="frame" x="415" y="731" width="195" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </pageControl>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="b7e-21-752">
+                    <rect key="frame" x="20" y="52" width="984" height="671"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>

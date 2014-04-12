@@ -42,22 +42,25 @@ namespace Sunny.iOS.Views
             {
                 missions = ((EarthViewModel)ViewModel).Missions;
                 
-                foreach (var mission in missions)
-                {                    
-                    var missionView = new UIButton(UIButtonType.System);
-                    missionView.SetTitle(mission.Name, UIControlState.Normal);
-                    missionView.Frame = new RectangleF(mission.X, mission.Y, 300, 40);
-                    missionView.BackgroundColor = UIColor.Clear;
-                    missionView.Layer.BorderColor = UIColor.Blue.CGColor;
-                    missionView.Layer.CornerRadius = 4;
-                    missionView.Layer.BorderWidth = 1;
+                if (missions != null)
+                {
+                    foreach (var mission in missions)
+                    {                    
+                        var missionView = new UIButton(UIButtonType.System);
+                        missionView.SetTitle(mission.Name, UIControlState.Normal);
+                        missionView.Frame = new RectangleF(mission.X, mission.Y, 300, 40);
+                        missionView.BackgroundColor = UIColor.Clear;
+                        missionView.Layer.BorderColor = UIColor.Blue.CGColor;
+                        missionView.Layer.CornerRadius = 4;
+                        missionView.Layer.BorderWidth = 1;
                     
-                    missionView.TouchUpInside += (s, ee) =>
-                    {
-                        ((EarthViewModel)ViewModel).ShowMissionCommand.Execute(mission);
-                    };
+                        missionView.TouchUpInside += (s, ee) =>
+                        {
+                            ((EarthViewModel)ViewModel).ShowMissionCommand.Execute(mission);
+                        };
                     
-                    View.AddSubview(missionView);
+                        View.AddSubview(missionView);
+                    }
                 }
             };
         }

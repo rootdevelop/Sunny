@@ -6,7 +6,7 @@ using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Sunny.Core.ViewModels;
 
-namespace Sunny.iOS
+namespace Sunny.iOS.Views
 {
     public partial class MissionView : MvxViewController
     {
@@ -28,9 +28,15 @@ namespace Sunny.iOS
 			
             // Perform any additional setup after loading the view, typically from a nib.
             
+            
             var set = this.CreateBindingSet<MissionView, MissionViewModel>();
             set.Bind(backButton).To("GoBackCommand"); 
             set.Apply();
+        }
+
+        private void HandlePageControlHeadValueChanged(object sender, EventArgs e)
+        {
+            this.scrollViewHead.SetContentOffset(new PointF(this.pageControlHead.CurrentPage * this.scrollViewHead.Frame.Width, 0), true);
         }
     }
 }

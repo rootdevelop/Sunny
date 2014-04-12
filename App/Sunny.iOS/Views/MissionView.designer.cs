@@ -7,20 +7,39 @@
 using MonoTouch.Foundation;
 using System.CodeDom.Compiler;
 
-namespace Sunny.iOS
+namespace Sunny.iOS.Views
 {
-	[Register ("MissionView")]
-	partial class MissionView
-	{
-		[Outlet]
-		MonoTouch.UIKit.UIButton backButton { get; set; }
-		
-		void ReleaseDesignerOutlets ()
-		{
-			if (backButton != null) {
-				backButton.Dispose ();
-				backButton = null;
-			}
-		}
-	}
+    [Register("MissionView")]
+    partial class MissionView
+    {
+        [Outlet]
+        MonoTouch.UIKit.UIButton backButton { get; set; }
+
+        [Outlet]
+        MonoTouch.UIKit.UIPageControl pageControlHead { get; set; }
+
+        [Outlet]
+        MonoTouch.UIKit.UIScrollView scrollViewHead { get; set; }
+
+        void ReleaseDesignerOutlets()
+        {
+            if (backButton != null)
+            {
+                backButton.Dispose();
+                backButton = null;
+            }
+
+            if (pageControlHead != null)
+            {
+                pageControlHead.Dispose();
+                pageControlHead = null;
+            }
+
+            if (scrollViewHead != null)
+            {
+                scrollViewHead.Dispose();
+                scrollViewHead = null;
+            }
+        }
+    }
 }
