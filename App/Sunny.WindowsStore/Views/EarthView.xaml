@@ -15,7 +15,7 @@
 
         <Image Grid.Row="0"
                HorizontalAlignment="Left"
-               Source="ms-appx:///Assets/EUROPE 02 01 2048x1536.png"
+               Source="ms-appx:///Assets/EUROPE 02 01 1920x1080.png"
                Stretch="Uniform" />
         <Image />
 

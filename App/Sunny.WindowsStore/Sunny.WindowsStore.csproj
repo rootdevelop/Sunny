@@ -144,7 +144,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\EUROPE 02 01 2048x1536.png" />
+    <Content Include="Assets\EUROPE 02 01 1920x1080.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
