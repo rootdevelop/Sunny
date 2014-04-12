@@ -42,5 +42,10 @@ namespace Sunny.Services.Controllers
 
             return RedirectToAction("Yeeeey");
         }
+
+        public ActionResult Yeeeey()
+        {
+            return View();
+        }
     }
 }
