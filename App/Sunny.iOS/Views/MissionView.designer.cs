@@ -20,6 +20,9 @@ namespace Sunny.iOS.Views
 
 		[Outlet]
 		MonoTouch.UIKit.UIImageView imageView { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel title { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -28,14 +31,19 @@ namespace Sunny.iOS.Views
 				backButton = null;
 			}
 
+			if (content != null) {
+				content.Dispose ();
+				content = null;
+			}
+
 			if (imageView != null) {
 				imageView.Dispose ();
 				imageView = null;
 			}
 
-			if (content != null) {
-				content.Dispose ();
-				content = null;
+			if (title != null) {
+				title.Dispose ();
+				title = null;
 			}
 		}
 	}
