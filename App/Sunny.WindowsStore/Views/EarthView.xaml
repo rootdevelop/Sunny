@@ -1,13 +1,46 @@
-﻿<local:BaseView
-    x:Class="Sunny.WindowsStore.Views.EarthView"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Sunny.WindowsStore.Views"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+﻿<local:BaseView x:Name="PageRoot"
+                x:Class="Sunny.WindowsStore.Views.EarthView"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:local="using:Sunny.WindowsStore.Views"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                mc:Ignorable="d">
 
-    <Grid x:Name="Earth" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock>earth view thingy</TextBlock>
+    <Grid x:Name="Earth"
+          Background="#FF00041D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0"
+               HorizontalAlignment="Left"
+               Source="ms-appx:///Assets/EUROPE 02 01 2048x1536.png"
+               Stretch="Uniform" />
+        <Image />
+
+        <ItemsControl Grid.Row="0"
+                      ItemsSource="{Binding Missions}"
+                      Margin="0">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Canvas>
+                        <Button BorderBrush="Blue"
+                                BorderThickness="5"
+                                Canvas.Left="{Binding X}"
+                                Canvas.Top="{Binding Y}"
+                                Background="Transparent"
+                                Command="{Binding ElementName=PageRoot,Path=DataContext.ShowMissionCommand}"
+                                CommandParameter="{Binding}">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{Binding Name}" />
+                                <TextBlock Text="{Binding X}" />
+                                <TextBlock Text="{Binding Y}" />
+                            </StackPanel>
+                        </Button>
+                    </Canvas>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </local:BaseView>

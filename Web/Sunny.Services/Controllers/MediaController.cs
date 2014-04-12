@@ -43,7 +43,7 @@ namespace Sunny.Services.Controllers
         // POST: /Media/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([Bind(Include="Id,ThumbnailUri,ImageUri,Description,Title,Date,Location,Tags,MissionId,MediaType")] Media media)
         {
@@ -77,7 +77,7 @@ namespace Sunny.Services.Controllers
         // POST: /Media/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit([Bind(Include="Id,ThumbnailUri,ImageUri,Description,Title,Date,Location,Tags,MissionId,MediaType")] Media media)
         {
