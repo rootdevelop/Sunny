@@ -175,3 +175,4 @@ FakesAssemblies/
 /App/Components
 /App/*.userprefs
 /App/*.userprefs
+/Web/Sunny.Services/Web.Release.config
