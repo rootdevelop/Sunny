@@ -52,6 +52,7 @@
     <Compile Include="Business\Language.cs" />
     <Compile Include="Observable\ObservableBase.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Net\WebApiClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
@@ -125,6 +126,7 @@
     <Folder Include="Comparers\" />
     <Folder Include="Configuration\" />
     <Folder Include="Services\Interfaces\" />
+    <Folder Include="Net\" />
   </ItemGroup>
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
