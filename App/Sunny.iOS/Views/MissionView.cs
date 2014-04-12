@@ -5,6 +5,7 @@ using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Sunny.Core.ViewModels;
+using Cirrious.MvvmCross.Binding.Touch.Views;
 
 namespace Sunny.iOS.Views
 {
@@ -14,29 +15,33 @@ namespace Sunny.iOS.Views
         {
         }
 
-        public override void DidReceiveMemoryWarning()
-        {
-            // Releases the view if it doesn't have a superview.
-            base.DidReceiveMemoryWarning();
-			
-            // Release any cached data, images, etc that aren't in use.
-        }
-
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 			
             // Perform any additional setup after loading the view, typically from a nib.
-            
-            
+            var imageViewLoader = new MvxImageViewLoader(() => this.imageView);
+                        
             var set = this.CreateBindingSet<MissionView, MissionViewModel>();
+            set.Bind(imageViewLoader).To(vm => vm.Mission.ImageUri);
             set.Bind(backButton).To("GoBackCommand"); 
             set.Apply();
+            
+            var html = ((MissionViewModel)ViewModel).Mission.Text;
+            content.LoadHtmlString(html, null);     
+            
+            content.ShouldStartLoad += shouldStartLoad;
         }
 
-        private void HandlePageControlHeadValueChanged(object sender, EventArgs e)
+        private bool shouldStartLoad(UIWebView webView, NSUrlRequest request, UIWebViewNavigationType navigationType)
         {
-            this.scrollViewHead.SetContentOffset(new PointF(this.pageControlHead.CurrentPage * this.scrollViewHead.Frame.Width, 0), true);
+            if (navigationType == UIWebViewNavigationType.LinkClicked)
+            {
+                UIApplication.SharedApplication.OpenUrl(request.Url);
+                return false;
+            }
+            
+            return true;
         }
     }
 }

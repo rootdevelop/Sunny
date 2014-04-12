@@ -9,37 +9,34 @@ using System.CodeDom.Compiler;
 
 namespace Sunny.iOS.Views
 {
-    [Register("MissionView")]
-    partial class MissionView
-    {
-        [Outlet]
-        MonoTouch.UIKit.UIButton backButton { get; set; }
+	[Register ("MissionView")]
+	partial class MissionView
+	{
+		[Outlet]
+		MonoTouch.UIKit.UIButton backButton { get; set; }
 
-        [Outlet]
-        MonoTouch.UIKit.UIPageControl pageControlHead { get; set; }
+		[Outlet]
+		MonoTouch.UIKit.UIWebView content { get; set; }
 
-        [Outlet]
-        MonoTouch.UIKit.UIScrollView scrollViewHead { get; set; }
+		[Outlet]
+		MonoTouch.UIKit.UIImageView imageView { get; set; }
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (backButton != null) {
+				backButton.Dispose ();
+				backButton = null;
+			}
 
-        void ReleaseDesignerOutlets()
-        {
-            if (backButton != null)
-            {
-                backButton.Dispose();
-                backButton = null;
-            }
+			if (imageView != null) {
+				imageView.Dispose ();
+				imageView = null;
+			}
 
-            if (pageControlHead != null)
-            {
-                pageControlHead.Dispose();
-                pageControlHead = null;
-            }
-
-            if (scrollViewHead != null)
-            {
-                scrollViewHead.Dispose();
-                scrollViewHead = null;
-            }
-        }
-    }
+			if (content != null) {
+				content.Dispose ();
+				content = null;
+			}
+		}
+	}
 }
