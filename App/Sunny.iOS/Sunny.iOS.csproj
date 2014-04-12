@@ -244,6 +244,7 @@
     <BundleResource Include="Resources\menu%402x.png" />
     <BundleResource Include="Resources\appicon-Small%402x.png" />
     <BundleResource Include="Resources\appicon.png" />
+    <BundleResource Include="Resources\background%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
