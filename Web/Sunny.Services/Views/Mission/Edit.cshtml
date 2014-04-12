@@ -3,6 +3,7 @@
 @section scripts
 {
     <script src="@Url.Content("~/Scripts/AddMedia.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/DatePicker.js")" type="text/javascript"></script>
 }
 
 @using (Html.BeginForm())
@@ -26,7 +27,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Date, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Date)
+                @Html.TextBoxFor(model => model.Date, new { @class="form-control date-picker" })
                 @Html.ValidationMessageFor(model => model.Date)
             </div>
         </div>
@@ -73,23 +74,26 @@
 
         <fieldset>
             <legend>Medias</legend>
-            @Html.Hidden(String.Format("RelationHelperViewModels[{0}].ViewModel.ListIndex", Model.MediaIds.Count), Model.MediaIds.Count)
 
-            @for (int i = 0; i < Model.MediaIds.Count; i++)
-            {
-                <div class="form-group">
-                    <label class="col-sm-3 control-label no-padding-right"></label>
-                    <div class="col-sm-9">
-                        @Html.DropDownList(String.Format("MediaIds[{0}]", i), (IEnumerable<SelectListItem>)ViewBag.ListOfMedia, "-- Select --")
-                        @Html.ValidationMessage(String.Format("MediaIds[{0}]", i))
-                    </div>
-                </div>
-            }
+            <div class="editor-field">
+                <ul>
+                    @foreach (var media in ViewBag.ListOfMedia)
+                    {
+                        <li>
+                            @if (Model.Media.Select(e => e).Where(e => e.Id == media.Id).Count() > 0)
+                            {
+                                <input type="checkbox" name="MediaIds" value="@media.Id" checked="checked" />
+                            }
+                            else
+                            {
+                                <input type="checkbox" name="MediaIds" value="@media.Id" />
+                            }
+                            @media.Title
+                        </li>
+                    }
+                </ul>
+            </div>
 
-            <button type="submit" name="action" id="AddMedia" class="btn btn-sm btn-success" onclick="javascript: addMediaRow(event);">
-                <i class="icon-pencil"></i>
-                Add Media
-            </button>
 
         </fieldset>
 

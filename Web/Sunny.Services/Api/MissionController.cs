@@ -21,7 +21,7 @@ namespace Sunny.Services.Api
         // GET api/Mission
         public IQueryable<Mission> GetMissions()
         {
-            return _db.Missions;
+            return _db.Missions.Include(x => x.Media);
         }
 
         // GET api/Mission/5

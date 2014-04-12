@@ -72,8 +72,7 @@ namespace Sunny.Services.Controllers
                 return HttpNotFound();
             }
 
-            var mediae = await db.Medias.ToListAsync();
-            ViewBag.ListOfMedia = new SelectList(mediae.Select(x => new { Value = x.Id, Text = x.Title }), "Value", "Text");
+            ViewBag.ListOfMedia = await db.Medias.ToListAsync();
 
             return View(mission);
         }
@@ -89,12 +88,16 @@ namespace Sunny.Services.Controllers
             {
                 db.Entry(mission).State = EntityState.Modified;
 
+                if (mission.MediaIds != null)
+                {
+                    mission.Media = (from t in db.Medias where mission.MediaIds.Contains(t.Id) select t).ToList();
+                }
+
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            var mediae = await db.Medias.ToListAsync();
-            ViewBag.ListOfTeachers = new SelectList(mediae.Select(x => new { Value = x.Id, Text = x.Title }), "Value", "Text");
+            ViewBag.ListOfMedia = await db.Medias.ToListAsync();
 
             return View(mission);
         }

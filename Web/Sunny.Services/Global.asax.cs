@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Newtonsoft.Json;
 using Sunny.Services.Data;
 
 namespace Sunny.Services
@@ -24,6 +25,8 @@ namespace Sunny.Services
             {
                 var a = db.Missions.ToList();
             }
+
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
         }
     }
 }
