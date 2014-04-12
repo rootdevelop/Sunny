@@ -33,7 +33,12 @@ namespace Sunny.Core.Net
                 //I had trouble with response.Content.ReadAsAsync<T> 
                 //  so reading content as string, and using Json.Net to deserialize
                 string content = await response.Content.ReadAsStringAsync();
-                result = JsonConvert.DeserializeObject<T>(content);
+                var settings = new JsonSerializerSettings()
+                {
+                    PreserveReferencesHandling = PreserveReferencesHandling.Objects
+                };
+
+                result = JsonConvert.DeserializeObject<T>(content, settings);
             }
 
             return result;
