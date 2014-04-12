@@ -7,6 +7,14 @@ namespace Sunny.Core.ViewModels
         public AboutViewModel()
         {
         }
+
+        public ICommand GoBackCommand
+        {
+            get
+            {
+                return new MvxCommand(() => Close(this));
+            }
+        }
     }
 }
 
