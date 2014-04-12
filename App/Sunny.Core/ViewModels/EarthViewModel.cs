@@ -10,6 +10,12 @@ namespace Sunny.Core.ViewModels
     {
         public EarthViewModel()
         {
+            GetMissions();
+        }
+
+        async void GetMissions()
+        {
+            Missions = await Business.Mission.GetMissions();
         }
 
         private IList<Domain.Mission> _missions;

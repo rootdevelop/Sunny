@@ -167,6 +167,7 @@
     <Reference Include="WindowsAzure.Messaging">
       <HintPath>..\_references\WindowsAzure.Messaging.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
