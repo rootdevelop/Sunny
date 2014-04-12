@@ -5,7 +5,6 @@ using Cirrious.MvvmCross.Touch.Views.Presenters;
 using Cirrious.MvvmCross.ViewModels;
 using MonoTouch.UIKit;
 using Sunny.Core;
-using Sunny.iOS.Views;
 
 namespace Sunny.iOS
 {
@@ -57,28 +56,5 @@ namespace Sunny.iOS
             return navBar;
         }
 
-        private MainView _mainView;
-
-        /// <summary>
-        /// The views below will be shown within the active tab on navigation. Other views will be shown as new windows.
-        /// </summary>
-        /// <param name="view"></param>
-        public override void Show(Cirrious.MvvmCross.Touch.Views.IMvxTouchView view)
-        {
-            if (view is MainView)
-            {
-                _mainView = view as MainView;
-            }
-
-//          if (view is SubView) {
-//              if (_mainView != null) {
-//                  _mainView.ShowinTab (view);
-//              }
-//              return;
-//          }
-
-
-            base.Show(view);
-        }
     }
 }

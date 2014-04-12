@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace Sunny.Core.Services.Net
+namespace Sunny.Core.Net
 {
     public class WebApiClient : IDisposable
     {
