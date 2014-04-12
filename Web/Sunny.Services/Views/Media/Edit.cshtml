@@ -77,19 +77,11 @@
                     @Html.ValidationMessageFor(model => model.Tags)
                 </div>
             </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.MissionId, "MissionId", new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownList("MissionId", String.Empty)
-                    @Html.ValidationMessageFor(model => model.MissionId)
-                </div>
-            </div>
-    
+
             <div class="form-group">
                 @Html.LabelFor(model => model.MediaType, new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.MediaType)
+                    @Html.EnumDropDownListFor(model => model.MediaType, "-- Select --")
                     @Html.ValidationMessageFor(model => model.MediaType)
                 </div>
             </div>

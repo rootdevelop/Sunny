@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -43,7 +44,7 @@ namespace Sunny.Services.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include="Id,Name,Date,Text,Location,Tags,ThumbnailUri,ImageUri")] Mission mission)
+        public async Task<ActionResult> Create([Bind(Include = "Id,Name,Date,Text,Location,Tags,ThumbnailUri,ImageUri")] Mission mission)
         {
             if (ModelState.IsValid)
             {
@@ -62,11 +63,18 @@ namespace Sunny.Services.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Mission mission = await db.Missions.FindAsync(id);
+            Mission mission = await (from m in db.Missions
+                                     .Include(x => x.Media)
+                                     where m.Id == id
+                                     select m).FirstOrDefaultAsync();
             if (mission == null)
             {
                 return HttpNotFound();
             }
+
+            var mediae = await db.Medias.ToListAsync();
+            ViewBag.ListOfMedia = new SelectList(mediae.Select(x => new { Value = x.Id, Text = x.Title }), "Value", "Text");
+
             return View(mission);
         }
 
@@ -75,15 +83,29 @@ namespace Sunny.Services.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include="Id,Name,Date,Text,Location,Tags,ThumbnailUri,ImageUri")] Mission mission)
+        public async Task<ActionResult> Edit(Mission mission)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(mission).State = EntityState.Modified;
+
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
+
+            var mediae = await db.Medias.ToListAsync();
+            ViewBag.ListOfTeachers = new SelectList(mediae.Select(x => new { Value = x.Id, Text = x.Title }), "Value", "Text");
+
             return View(mission);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> MediaRelation(int count)
+        {
+            var mediae = await db.Medias.ToListAsync();
+            ViewBag.ListOfTeachers = new SelectList(mediae.Select(x => new { Value = x.Id, Text = x.Title }), "Value", "Text");
+
+            return PartialView("NewMediaPartial", count);
         }
 
         // GET: /Mission/Delete/5
@@ -109,7 +131,13 @@ namespace Sunny.Services.Controllers
             Mission mission = await db.Missions.FindAsync(id);
             db.Missions.Remove(mission);
             await db.SaveChangesAsync();
+
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public void DeleteMediaRelationNoRedirect(object id)
+        {
         }
 
         protected override void Dispose(bool disposing)
