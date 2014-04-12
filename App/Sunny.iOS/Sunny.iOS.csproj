@@ -207,7 +207,6 @@
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <ItemGroup>
     <XamarinComponentReference Include="azure-mobile-services">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>1.2.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>

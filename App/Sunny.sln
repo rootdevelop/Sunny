@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-VisualStudioVersion = {0}
-MinimumVisualStudioVersion = {0}
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sunny.Core", "Sunny.Core\Sunny.Core.csproj", "{704E7800-9499-46DA-B9DB-9097CCFFF83E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sunny.iOS", "Sunny.iOS\Sunny.iOS.csproj", "{09F992E7-D3EA-4FC8-AA74-6C0FB6952A3E}"
