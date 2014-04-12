@@ -8,16 +8,16 @@ namespace Sunny.Core.Services
 {
     public class MissionService : IMissionService
     {
-        WebApiClient _client;
+        private readonly WebApiClient _client;
 
         public MissionService()
         {
             _client = new WebApiClient(Constants.BaseUrl);
         }
 
-        public Task<IList<Domain.Mission>> GetMissions()
+        public async Task<IList<Domain.Mission>> GetMissions()
         {
-            return _client.GetAsync<IList<Domain.Mission>>("Mission");
+            return await _client.GetAsync<IList<Domain.Mission>>("Mission");
         }
     }
 }

@@ -59,6 +59,7 @@
     <Compile Include="ViewModels\MissionViewModel.cs" />
     <Compile Include="Services\Interfaces\IMissionService.cs" />
     <Compile Include="Services\MissionService.cs" />
+    <Compile Include="Business\Mission.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
