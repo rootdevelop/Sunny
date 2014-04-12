@@ -109,6 +109,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Components\azure-mobile-services-1.2.1\lib\ios\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="SatelliteMenu">
+      <HintPath>..\Components\satellite-menu-1.1\lib\ios\SatelliteMenu.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Net.Http.Extensions">
       <HintPath>..\Components\azure-mobile-services-1.2.1\lib\ios\System.Net.Http.Extensions.dll</HintPath>
@@ -168,9 +171,6 @@
       <HintPath>..\_references\WindowsAzure.Messaging.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows" />
-    <Reference Include="SatelliteMenu">
-      <HintPath>..\Components\satellite-menu-1.1\lib\ios\SatelliteMenu.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -214,7 +214,6 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
     <XamarinComponentReference Include="satellite-menu">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>1.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
@@ -224,9 +223,7 @@
     <InterfaceDefinition Include="Views\EarthView.xib" />
     <InterfaceDefinition Include="Views\MissionView.xib" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BundleResource Include="Resources\menu%402x.png" />
     <BundleResource Include="Resources\appicon-Small%402x.png" />
