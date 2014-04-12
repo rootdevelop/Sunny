@@ -2,7 +2,8 @@
 {
     public enum EMediaType
     {
-        Image = 0, 
-        Video = 1
+        Image = 0,
+        Video = 1,
+        LiveStream = 2
     }
 }

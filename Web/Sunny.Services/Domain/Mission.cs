@@ -20,10 +20,17 @@ namespace Sunny.Services.Domain
         public string ImageUri { get; set; }
         public float X { get; set; }
         public float Y { get; set; }
+        public bool MainPage { get; set; }
 
         public IList<Media> Media { get; set; }
+        public IList<News> News { get; set; }
+        public IList<Announcement> Announcements { get; set; }
 
         [NotMapped]
         public int[] MediaIds { get; set; }
+        [NotMapped]
+        public int[] NewsIds { get; set; }
+        [NotMapped]
+        public int[] AnnouncementIds { get; set; }
     }
 }

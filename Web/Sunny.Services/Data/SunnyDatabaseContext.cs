@@ -19,5 +19,9 @@ namespace Sunny.Services.Data
 
         public DbSet<Media> Medias { get; set; }
         public DbSet<Mission> Missions { get; set; }
+
+        public System.Data.Entity.DbSet<Sunny.Services.Domain.News> News { get; set; }
+
+        public System.Data.Entity.DbSet<Sunny.Services.Domain.Announcement> Announcements { get; set; }
     }
 }
