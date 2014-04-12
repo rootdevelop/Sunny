@@ -57,6 +57,8 @@
     <Compile Include="Net\WebApiClient.cs" />
     <Compile Include="ViewModels\EarthViewModel.cs" />
     <Compile Include="ViewModels\MissionViewModel.cs" />
+    <Compile Include="Services\Interfaces\IMissionService.cs" />
+    <Compile Include="Services\MissionService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
