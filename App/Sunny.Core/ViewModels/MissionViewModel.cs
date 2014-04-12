@@ -3,7 +3,7 @@ using Sunny.Core.ViewModels;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Sunny.Core
+namespace Sunny.Core.ViewModels
 {
     public class MissionViewModel : BaseViewModel
     {
