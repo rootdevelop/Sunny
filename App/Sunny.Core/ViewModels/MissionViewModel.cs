@@ -30,21 +30,6 @@ namespace Sunny.Core
                 RaisePropertyChanged(() => Mission);
             }
         }
-
-        private IList<Domain.Media> _mediaItems;
-
-        public IList<Domain.Media> MediaItems
-        {
-            get
-            {
-                return _mediaItems;
-            }
-            set
-            {
-                _mediaItems = value;
-                RaisePropertyChanged(() => MediaItems);
-            }
-        }
     }
 }
 
