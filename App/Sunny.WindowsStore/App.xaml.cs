@@ -9,6 +9,10 @@ using Windows.UI.Xaml.Navigation;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.ViewModels;
 
+// Manuali added for pushnotification
+using Windows.Networking.PushNotifications;
+using Microsoft.WindowsAzure.Messaging;
+
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 using Sunny.WindowsStore.Controls;
 
@@ -19,6 +23,18 @@ namespace Sunny.WindowsStore
     /// </summary>
     sealed partial class App : Application
     {
+        private async void InitNotificationsAsync()
+        {
+            
+            var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+            var hub = new NotificationHub(Core.Constants.NotificationHubPath, Core.Constants.ConnectionString); var result = await hub.RegisterNativeAsync(channel.Uri);
+            //var hub = new NotificationHub("<hub name>", "<connection string with listen access>"); var result = await hub.RegisterNativeAsync(channel.Uri);
+            // Displays the registration ID so you know it was successful    if (result.RegistrationId != null)    {        var dialog = new MessageDialog("Registration successful: " + result.RegistrationId);        dialog.Commands.Add(new UICommand("OK"));        await dialog.ShowAsync();    }
+        }
+
+
+
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -38,6 +54,8 @@ namespace Sunny.WindowsStore
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs args)
         {
+            InitNotificationsAsync();
+
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,

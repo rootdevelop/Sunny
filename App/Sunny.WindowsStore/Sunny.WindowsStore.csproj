@@ -142,6 +142,7 @@
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -213,6 +214,9 @@
     </Reference>
     <Reference Include="Cirrious.MvvmCross.WindowsStore">
       <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\netcore45\Cirrious.MvvmCross.WindowsStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Messaging.Managed">
+      <HintPath>..\packages\WindowsAzure.Messaging.Managed.0.1.7.6\lib\netcore45\Microsoft.WindowsAzure.Messaging.Managed.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.1.1\lib\netcore45\Newtonsoft.Json.dll</HintPath>
