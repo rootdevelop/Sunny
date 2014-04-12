@@ -2,10 +2,11 @@
 using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Cirrious.MvvmCross.Touch.Views;
 
-namespace Sunny.iOS
+namespace Sunny.iOS.Views
 {
-    public partial class AboutView : UIViewController
+    public partial class AboutView : MvxViewController
     {
         public AboutView() : base("AboutView", null)
         {

@@ -6,6 +6,7 @@ using Sunny.Core.ViewModels;
 using System.Collections.Generic;
 using Sunny.Core.Domain;
 using SatelliteMenu;
+using Cirrious.MvvmCross.Binding.BindingContext;
 
 namespace Sunny.iOS.Views
 {
@@ -19,18 +20,22 @@ namespace Sunny.iOS.Views
         {
             // Releases the view if it doesn't have a superview.
             base.DidReceiveMemoryWarning();
-			
+            
             // Release any cached data, images, etc that aren't in use.
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-			
+            
             // Perform any additional setup after loading the view, typically from a nib.
             
             AddSateliteMenu();
             AddMissions();
+            
+            var set = this.CreateBindingSet<EarthView, EarthViewModel>();
+            set.Bind(aboutButton).To("ShowAboutViewCommand"); 
+            set.Apply();
 
         }
 
