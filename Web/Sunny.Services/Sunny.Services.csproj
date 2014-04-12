@@ -139,6 +139,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\MediaController.cs" />
+    <Compile Include="Api\MissionController.cs" />
+    <Compile Include="Api\SunnyController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -239,7 +242,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Api\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
