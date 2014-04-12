@@ -40,7 +40,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.1260417197" green="0.38483806409999999" blue="0.66593590560000004" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                    <state key="normal" title="     Live streams">
+                    <state key="normal" title="     Live stream">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
