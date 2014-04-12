@@ -10,6 +10,7 @@ using Mono.Security.X509;
 using System.Collections.Generic;
 using Sunny.Core.Domain;
 using System.Windows;
+using SatelliteMenu;
 
 namespace Sunny.iOS.Views
 {
@@ -33,6 +34,13 @@ namespace Sunny.iOS.Views
 			
             // Perform any additional setup after loading the view, typically from a nib.
             
+            AddSateliteMenu();
+            AddMissions();
+
+        }
+
+        void AddMissions()
+        {
             IList<Core.Domain.Mission> missions;
             
             ((EarthViewModel)ViewModel).PropertyChanged += (sender, e) =>
@@ -57,11 +65,32 @@ namespace Sunny.iOS.Views
                     View.AddSubview(missionView);
                 }
             };
-            
-            
-            
-            
-            
+        }
+
+        void AddSateliteMenu()
+        {
+            var image = UIImage.FromBundle("menu.png");
+            var yPos = View.Frame.Height - image.Size.Height - 10;
+            var frame = new RectangleF(10, yPos, 30, 30);
+
+            var items = new []
+            { 
+                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 1, "Search"),
+                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 2, "Update"),
+                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 3, "Share"),
+                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 4, "Post"),
+                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 5, "Reload"),
+                new SatelliteMenuButtonItem(UIImage.FromBundle("menu.png"), 6, "Settingd")
+            };
+
+            var button = new SatelliteMenuButton(View, image, items, frame);
+
+            button.MenuItemClick += (_, args) =>
+            {
+                Console.WriteLine("{0} was clicked!", args.MenuItem.Name);
+            };
+
+            View.AddSubview(button);
         }
     }
 }
