@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Cirrious.CrossCore;
 using Sunny.Core.Services.Interfaces;
 using System.Collections.Generic;

@@ -229,5 +229,18 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\menu%402x.png" />
+    <BundleResource Include="Resources\appicon-Small%402x.png" />
+    <BundleResource Include="Resources\appicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appicon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appicon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appicon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appicon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appicon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appicon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appicon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\appicon-Small-40%402x.png" />
   </ItemGroup>
 </Project>

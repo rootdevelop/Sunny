@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Drawing;
-using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Views;
 using Sunny.Core.ViewModels;
-using System.Runtime.InteropServices;
-using System.Collections;
-using Mono.Security.X509;
 using System.Collections.Generic;
 using Sunny.Core.Domain;
-using System.Windows;
 using SatelliteMenu;
 
 namespace Sunny.iOS.Views
