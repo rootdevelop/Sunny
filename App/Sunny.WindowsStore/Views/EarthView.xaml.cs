@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+using Windows.UI.Xaml.Shapes;
+using Sunny.Core.ViewModels;
 
 namespace Sunny.WindowsStore.Views
 {
@@ -24,7 +26,7 @@ namespace Sunny.WindowsStore.Views
     {
         public EarthView()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
     }
 }

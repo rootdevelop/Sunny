@@ -2,14 +2,21 @@
 using Sunny.Core.ViewModels;
 using System.Collections;
 using System.Collections.Generic;
+using System.Windows.Input;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace Sunny.Core.ViewModels
 {
     public class MissionViewModel : BaseViewModel
     {
-        public void Init(Domain.Mission mission)
+        public void Init(int id)
         {
-            Mission = mission;
+            GetMission(id);
+        }
+
+        private async void GetMission(int id)
+        {
+            Mission = await Business.Mission.GetMission(id);
         }
 
         public MissionViewModel()
@@ -28,6 +35,14 @@ namespace Sunny.Core.ViewModels
             {
                 _mission = value;
                 RaisePropertyChanged(() => Mission);
+            }
+        }
+
+        public ICommand GoBackCommand
+        {
+            get
+            {
+                return new MvxCommand(() => Close(this));
             }
         }
     }

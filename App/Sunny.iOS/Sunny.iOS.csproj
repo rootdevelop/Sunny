@@ -171,6 +171,12 @@
       <HintPath>..\_references\WindowsAzure.Messaging.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows" />
+    <Reference Include="SatelliteMenu">
+      <HintPath>..\Components\satellite-menu-1.1\lib\ios\SatelliteMenu.dll</HintPath>
+    </Reference>
+    <Reference Include="ShinobiEssentials">
+      <HintPath>..\Components\ShinobiEssentials-2.5.1-trial\lib\ios\ShinobiEssentials.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -199,6 +205,10 @@
     <Compile Include="Views\MissionView.designer.cs">
       <DependentUpon>MissionView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AboutView.cs" />
+    <Compile Include="Views\AboutView.designer.cs">
+      <DependentUpon>AboutView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
@@ -217,11 +227,17 @@
       <Version>1.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+    <XamarinComponentReference Include="ShinobiEssentials-trial">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>2.5.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <InterfaceDefinition Include="Views\EarthView.xib" />
     <InterfaceDefinition Include="Views\MissionView.xib" />
+    <InterfaceDefinition Include="Views\AboutView.xib" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

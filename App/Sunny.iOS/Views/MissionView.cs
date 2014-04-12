@@ -3,6 +3,8 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Views;
+using Cirrious.MvvmCross.Binding.BindingContext;
+using Sunny.Core.ViewModels;
 
 namespace Sunny.iOS.Views
 {
@@ -25,6 +27,16 @@ namespace Sunny.iOS.Views
             base.ViewDidLoad();
 			
             // Perform any additional setup after loading the view, typically from a nib.
+            
+            
+            var set = this.CreateBindingSet<MissionView, MissionViewModel>();
+            set.Bind(backButton).To("GoBackCommand"); 
+            set.Apply();
+        }
+
+        private void HandlePageControlHeadValueChanged(object sender, EventArgs e)
+        {
+            this.scrollViewHead.SetContentOffset(new PointF(this.pageControlHead.CurrentPage * this.scrollViewHead.Frame.Width, 0), true);
         }
     }
 }

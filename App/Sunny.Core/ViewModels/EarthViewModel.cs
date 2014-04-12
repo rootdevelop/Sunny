@@ -33,11 +33,19 @@ namespace Sunny.Core.ViewModels
             }
         }
 
+        public ICommand ShowAboutViewCommand
+        {
+            get
+            { 
+                return new MvxCommand(() => ShowViewModel<AboutViewModel>());
+            }
+        }
+
         public ICommand ShowMissionCommand
         {
             get
-            {
-                return new MvxCommand<Domain.Mission>(mission => ShowViewModel<MissionViewModel>(mission));
+            { 
+                return new MvxCommand<Domain.Mission>(mission => ShowViewModel<MissionViewModel>(new { id = mission.Id}));
             }
         }
     }
