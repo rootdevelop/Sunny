@@ -20,7 +20,7 @@ namespace Sunny.WindowsStore.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MissionView : Page
+    public sealed partial class MissionView : BaseView
     {
         public MissionView()
         {
