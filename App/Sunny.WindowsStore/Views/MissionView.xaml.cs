@@ -36,7 +36,22 @@ namespace Sunny.WindowsStore.Views
             Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
                 ChatListBox.Items.Add(s + ": " + s1);
+
+                ScrollToBottom();
             });
+        }
+
+        private void ScrollToBottom()
+        {
+            var selectedIndex = ChatListBox.Items.Count - 1;
+            if (selectedIndex < 0)
+                return;
+
+            ChatListBox.SelectedIndex = selectedIndex;
+            ChatListBox.ScrollIntoView(ChatListBox.SelectedItem);
+
+            ChatListBox.UpdateLayout();
+
         }
     }
 }

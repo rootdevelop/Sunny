@@ -105,7 +105,8 @@
                                                      AutoLoad="False" />
                     </Canvas>
                     
-                    <ListBox x:Name="ChatListBox"/>
+                    <ListBox x:Name="ChatListBox"
+                             Height="250"/>
                     <StackPanel Orientation="Horizontal"
                                 DataContext="{Binding LiveStreamViewModel}">
                         <TextBox Text="{Binding UserName, Mode=TwoWay}"
