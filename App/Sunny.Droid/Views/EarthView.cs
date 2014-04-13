@@ -27,6 +27,8 @@ namespace Sunny.Droid.Views
 			protected EarthViewModel EarthViewModel
 			{ get { return base.ViewModel as EarthViewModel; } }
 
+			protected NewsOverviewViewModel NewsOverviewViewModel = new NewsOverviewViewModel();
+
 			protected override void OnCreate(Bundle bundle)
 			{
 				base.OnCreate(bundle);
@@ -78,11 +80,11 @@ namespace Sunny.Droid.Views
 				{
 					case 0:
 					fragment = new EarthViewFragment();
-					fragment.ViewModel = new EarthViewModel();
+					fragment.ViewModel = EarthViewModel;
 					break;
 					case 1:
 					fragment = new NewsFragment();
-					fragment.ViewModel = new NewsOverviewViewModel();
+					fragment.ViewModel = NewsOverviewViewModel;
 					break;
 				}
 
