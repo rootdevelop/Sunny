@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
@@ -19,9 +18,9 @@ namespace Sunny.Core.ViewModels
             Missions = (await Business.Mission.GetMissions()).Where(x => x.MainPage).ToList();
         }
 
-        private IList<Domain.Mission> _missions;
+        private IList<Mission> _missions;
 
-        public IList<Domain.Mission> Missions
+        public IList<Mission> Missions
         {
             get
             {
@@ -37,7 +36,7 @@ namespace Sunny.Core.ViewModels
         public ICommand ShowAboutViewCommand
         {
             get
-            { 
+            {
                 return new MvxCommand(() => ShowViewModel<AboutViewModel>());
             }
         }
@@ -45,8 +44,24 @@ namespace Sunny.Core.ViewModels
         public ICommand ShowMissionCommand
         {
             get
-            { 
-                return new MvxCommand<Domain.Mission>(mission => ShowViewModel<MissionViewModel>(new { id = mission.Id}));
+            {
+                return new MvxCommand<Mission>(mission => ShowViewModel<MissionViewModel>(new { id = mission.Id }));
+            }
+        }
+
+        public ICommand ShowNewsViewCommand
+        {
+            get
+            {
+                return new MvxCommand(() => ShowViewModel<NewsViewModel>());
+            }
+        }
+
+        public ICommand ShowStreamViewCommand
+        {
+            get
+            {
+                return new MvxCommand(() => ShowViewModel<StreamViewModel>());
             }
         }
     }

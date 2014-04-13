@@ -31,6 +31,10 @@ namespace Sunny.Services.Services
             var toastTemplate = @"<toast><visual><binding template=""ToastText01""><text id=""1"">{0}</text></binding></visual></toast>";
             var toast = string.Format(toastTemplate, message);
             await hub.SendWindowsNativeNotificationAsync(toast);
+
+            // Send android notifications
+            var notification = "{ \"data\" : {\"msg\":\""+ message +"\"}}";
+            await hub.SendGcmNativeNotificationAsync(notification);
         }
     }
 }
