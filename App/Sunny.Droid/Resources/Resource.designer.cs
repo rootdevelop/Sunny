@@ -893,8 +893,8 @@ namespace Sunny.Droid
 			// aapt resource value: 0x7f05000d
 			public const int collapseActionView = 2131034125;
 			
-			// aapt resource value: 0x7f05003f
-			public const int content_frame = 2131034175;
+			// aapt resource value: 0x7f050040
+			public const int content_frame = 2131034176;
 			
 			// aapt resource value: 0x7f050029
 			public const int default_activity_button = 2131034153;
@@ -905,8 +905,8 @@ namespace Sunny.Droid
 			// aapt resource value: 0x7f050008
 			public const int disableHome = 2131034120;
 			
-			// aapt resource value: 0x7f05003e
-			public const int drawer_layout = 2131034174;
+			// aapt resource value: 0x7f05003f
+			public const int drawer_layout = 2131034175;
 			
 			// aapt resource value: 0x7f05000f
 			public const int dropdown = 2131034127;
@@ -923,8 +923,8 @@ namespace Sunny.Droid
 			// aapt resource value: 0x7f05002d
 			public const int expanded_menu = 2131034157;
 			
-			// aapt resource value: 0x7f050040
-			public const int flyout = 2131034176;
+			// aapt resource value: 0x7f050041
+			public const int flyout = 2131034177;
 			
 			// aapt resource value: 0x7f050014
 			public const int home = 2131034132;
@@ -1019,11 +1019,14 @@ namespace Sunny.Droid
 			// aapt resource value: 0x7f05003a
 			public const int submit_area = 2131034170;
 			
-			// aapt resource value: 0x7f050041
-			public const int subscribeMenuItem = 2131034177;
+			// aapt resource value: 0x7f050042
+			public const int subscribeMenuItem = 2131034178;
 			
 			// aapt resource value: 0x7f050002
 			public const int tabMode = 2131034114;
+			
+			// aapt resource value: 0x7f05003e
+			public const int textView2 = 2131034174;
 			
 			// aapt resource value: 0x7f05002c
 			public const int title = 2131034156;
@@ -1037,8 +1040,8 @@ namespace Sunny.Droid
 			// aapt resource value: 0x7f050003
 			public const int useLogo = 2131034115;
 			
-			// aapt resource value: 0x7f050042
-			public const int webView = 2131034178;
+			// aapt resource value: 0x7f050043
+			public const int webView = 2131034179;
 			
 			// aapt resource value: 0x7f05000c
 			public const int withText = 2131034124;
@@ -1145,34 +1148,37 @@ namespace Sunny.Droid
 			public const int abc_simple_decor = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int drawer_list_item = 2130903064;
+			public const int AboutFragment = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int EarthView = 2130903065;
+			public const int drawer_list_item = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int item_mission = 2130903066;
+			public const int EarthView = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int item_news = 2130903067;
+			public const int item_mission = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int Main = 2130903068;
+			public const int item_news = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int menu_mission_actions = 2130903069;
+			public const int Main = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int MissionView = 2130903070;
+			public const int menu_mission_actions = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int NewsFragment = 2130903071;
+			public const int MissionView = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int SplashScreen = 2130903072;
+			public const int NewsFragment = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int support_simple_spinner_dropdown_item = 2130903073;
+			public const int SplashScreen = 2130903073;
+			
+			// aapt resource value: 0x7f030022
+			public const int support_simple_spinner_dropdown_item = 2130903074;
 			
 			static Layout()
 			{
