@@ -7,7 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MissionView">
             <connections>
                 <outlet property="backButton" destination="QDq-zF-ZTZ" id="wFk-Gk-hl8"/>
+                <outlet property="firstTitle" destination="HLV-ug-EAY" id="XUV-Tx-laA"/>
                 <outlet property="imageView" destination="Avw-MX-ARm" id="1zw-Pk-AsV"/>
+                <outlet property="secondTitle" destination="Np9-3x-cPl" id="gRv-vd-R03"/>
                 <outlet property="title" destination="9Z0-HT-4sS" id="6hj-NF-wid"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
@@ -48,8 +50,8 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multimedia Gallery" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Np9-3x-cPl">
-                    <rect key="frame" x="130" y="625" width="143" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe to updates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Np9-3x-cPl">
+                    <rect key="frame" x="119" y="625" width="165" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
