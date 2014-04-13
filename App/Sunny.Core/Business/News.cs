@@ -19,7 +19,7 @@ namespace Sunny.Core.Business
             {
 
                 var news = await Mvx.Resolve<INewsService>().GetNewsForMissionId(id);
-                if (NewsForMission[id] != null)
+                if (NewsForMission.ContainsKey(id))
                 {
                     NewsForMission[id] = news;
                 }
