@@ -115,7 +115,7 @@
                         <ListBox x:Name="ChatListBox"
                                  Width="600"
                                  Height="300"
-                                 Margin="0,0,0,10"/>
+                                 Margin="0,0,0,10" />
 
                         <StackPanel Orientation="Horizontal"
                                     DataContext="{Binding LiveStreamViewModel}"
@@ -123,7 +123,8 @@
                             <TextBox Text="{Binding UserName, Mode=TwoWay}"
                                      Width="100"
                                      Margin="0,0,10,0" />
-                            <TextBox Text="{Binding Message, Mode=TwoWay}"
+                            <TextBox x:Name="MessageTextBox"
+                                     Text="{Binding Message, Mode=TwoWay}"
                                      Width="360"
                                      Margin="0,0,10,0"
                                      KeyUp="UIElementOnKeyUp" />
@@ -131,7 +132,7 @@
                                     Command="{Binding SendMessageCommand}" />
                         </StackPanel>
                     </StackPanel>
-                    
+
 
                 </StackPanel>
                 <StackPanel Width="740"

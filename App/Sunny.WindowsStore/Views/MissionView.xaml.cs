@@ -60,6 +60,7 @@ namespace Sunny.WindowsStore.Views
         {
             if (e.Key == VirtualKey.Enter)
             {
+                ((MissionViewModel) ViewModel).LiveStreamViewModel.Message = MessageTextBox.Text;
                 ((MissionViewModel)ViewModel).LiveStreamViewModel.SendMessageCommand.Execute(null);
             }
         }

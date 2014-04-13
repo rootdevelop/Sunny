@@ -132,9 +132,6 @@
     <Compile Include="Views\EarthView.xaml.cs">
       <DependentUpon>EarthView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MainView.xaml.cs">
-      <DependentUpon>MainView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\MissionOverviewView.xaml.cs">
       <DependentUpon>MissionOverviewView.xaml</DependentUpon>
     </Compile>
@@ -198,10 +195,6 @@
     <Page Include="Views\EarthView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MissionOverviewView.xaml">
       <Generator>MSBuild:Compile</Generator>
