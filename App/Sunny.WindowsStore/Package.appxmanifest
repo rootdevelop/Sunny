@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="8020jklinklo.SunnyApp" Publisher="CN=C094E728-BA34-4586-8D5B-24D04B25BD22" Version="1.1.0.0" />
+  <Identity Name="8020jklinklo.SunnyApp" Publisher="CN=C094E728-BA34-4586-8D5B-24D04B25BD22" Version="1.1.0.5" />
   <Properties>
     <DisplayName>SunnyApp</DisplayName>
     <PublisherDisplayName>jklinklo</PublisherDisplayName>
