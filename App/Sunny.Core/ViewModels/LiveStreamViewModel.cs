@@ -4,13 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Cirrious.MvvmCross.ViewModels;
+using Sunny.Core.Business;
 
 namespace Sunny.Core.ViewModels
 {
     public class LiveStreamViewModel : BaseViewModel
     {
+        public static Action<string, string> MessageReceivedAsyncCallback { get; set; }
         private string _userName = String.Empty;
         private string _liveStreamUrl = String.Empty;
+
+        public LiveStreamViewModel()
+        {
+            LiveStreamUrl = "http://media.infozen.cshls.lldns.net/infozen/media/media.m3u8";
+            InitSocket();
+        }
+
+        private async void InitSocket()
+        {
+            SunnySocket.MessageReceivedAsyncCallback = MessageReceivedAsyncCallback;
+
+            await SunnySocket.Init();
+        }
 
         public string LiveStreamUrl
         {
@@ -32,17 +47,12 @@ namespace Sunny.Core.ViewModels
             }
         }
 
-        public ICommand NewsDetailsCommand
+        public ICommand SendMessageCommand
         {
             get
             {
-                return new MvxCommand<string>(message => {  });
+                return new MvxCommand<string>(message => { SunnySocket.SendMessage(UserName, message); });
             }
-        }
-
-        public LiveStreamViewModel()
-        {
-            LiveStreamUrl = "http://media.infozen.cshls.lldns.net/infozen/media/media.m3u8";
         }
     }
 }

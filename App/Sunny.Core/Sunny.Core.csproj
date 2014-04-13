@@ -40,6 +40,7 @@
     <Compile Include="App.cs" />
     <Compile Include="Business\Announcement.cs" />
     <Compile Include="Business\News.cs" />
+    <Compile Include="Business\SunnySocket.cs" />
     <Compile Include="Converters\InverseBooleanConverter.cs" />
     <Compile Include="Domain\Announcement.cs" />
     <Compile Include="Domain\Enums\ELocalizedLanguageCode.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="Language\CustomTextProvider.cs" />
     <Compile Include="Language\CustomTextProviderBuilder.cs" />
     <Compile Include="Mappers\MapperBindings.cs" />
+    <Compile Include="Net\SocketHub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CustomServiceBindings.cs" />
     <Compile Include="Services\Interfaces\IAnnouncementService.cs" />
@@ -106,6 +108,9 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.Visibility">
       <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Visibility.3.1.1\lib\portable-win+net45+sl50+wp8+MonoAndroid+MonoTouch\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.0.3\lib\portable-net45+sl5+netcore45+wp8\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Threading.Tasks">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
     </Reference>
@@ -113,7 +118,7 @@
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.1.1\lib\portable-win+net45+sl50+wp8+MonoAndroid+MonoTouch\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.1\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.IO">
       <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.dll</HintPath>
