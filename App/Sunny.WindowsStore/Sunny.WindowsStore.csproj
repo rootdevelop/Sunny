@@ -167,7 +167,7 @@
     <Content Include="Assets\SunnyApp_620x300.png" />
     <Content Include="Assets\SunnyApp_70x70.scale-100.png" />
     <Content Include="Assets\SunnyApp_800x800 %28org%29.png" />
-    <Content Include="Assets\SunnyText.png" />
+    <Content Include="Assets\SunnyApp_SunnyAppText.png" />
     <Content Include="Assets\Team.jpg" />
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
