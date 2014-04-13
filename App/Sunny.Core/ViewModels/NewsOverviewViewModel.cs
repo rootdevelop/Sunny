@@ -33,7 +33,6 @@ namespace Sunny.Core.ViewModels
                 RaisePropertyChanged(() => News);
             }
         }
-
         //public ICommand NewsDetailsCommand
         //{
         //    get

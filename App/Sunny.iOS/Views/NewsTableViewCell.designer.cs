@@ -7,27 +7,27 @@
 using MonoTouch.Foundation;
 using System.CodeDom.Compiler;
 
-namespace Sunny.iOS.Views
+namespace Sunny.iOS
 {
-	[Register ("NewsOverviewView")]
-	partial class NewsOverviewView
+	[Register ("NewsTableViewCell")]
+	partial class NewsTableViewCell
 	{
 		[Outlet]
-		MonoTouch.UIKit.UIButton backButton { get; set; }
+		MonoTouch.UIKit.UITextView text { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UITableView tableView { get; set; }
+		MonoTouch.UIKit.UILabel title { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (backButton != null) {
-				backButton.Dispose ();
-				backButton = null;
+			if (title != null) {
+				title.Dispose ();
+				title = null;
 			}
 
-			if (tableView != null) {
-				tableView.Dispose ();
-				tableView = null;
+			if (text != null) {
+				text.Dispose ();
+				text = null;
 			}
 		}
 	}

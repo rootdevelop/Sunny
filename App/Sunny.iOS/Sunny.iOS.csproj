@@ -210,6 +210,10 @@
     <Compile Include="Views\NewsOverviewView.designer.cs">
       <DependentUpon>NewsOverviewView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewsTableViewCell.cs" />
+    <Compile Include="Views\NewsTableViewCell.designer.cs">
+      <DependentUpon>NewsTableViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
@@ -239,6 +243,7 @@
     <InterfaceDefinition Include="Views\AboutView.xib" />
     <InterfaceDefinition Include="Views\EarthView.xib" />
     <InterfaceDefinition Include="Views\NewsOverviewView.xib" />
+    <InterfaceDefinition Include="Views\NewsTableViewCell.xib" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

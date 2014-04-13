@@ -5,6 +5,7 @@ using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Touch.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Sunny.Core.ViewModels;
+using Cirrious.MvvmCross.Binding.Touch.Views;
 
 namespace Sunny.iOS.Views
 {
@@ -28,7 +29,11 @@ namespace Sunny.iOS.Views
 			
             // Perform any additional setup after loading the view, typically from a nib.
         
+            var source = new MvxSimpleTableViewSource(tableView, NewsTableViewCell.Key, NewsTableViewCell.Key);
+            tableView.Source = source;           
+            
             var set = this.CreateBindingSet<NewsOverviewView, NewsOverviewViewModel>();
+            set.Bind(source).To(vm => vm.News); 
             set.Bind(backButton).To("GoBackCommand"); 
             set.Apply();
         }
