@@ -21,6 +21,13 @@ namespace Sunny.Services.Api
         // GET api/News/5
         public async Task<IList<News>> GetNews(int id)
         {
+            if (id == 0)
+            {
+                return await (from n in _db.News
+                              where n.Mission == null
+                              select n).ToListAsync();
+            }
+
             return await (from n in _db.News
                               where n.Mission.Id == id
                               select n).ToListAsync();

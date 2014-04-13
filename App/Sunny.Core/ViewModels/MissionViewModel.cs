@@ -1,4 +1,6 @@
 ﻿using System;
+using Cirrious.CrossCore;
+using Sunny.Core.Services.Interfaces;
 using Sunny.Core.ViewModels;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +13,7 @@ namespace Sunny.Core.ViewModels
     {
         private NewsOverviewViewModel _newsOverviewViewModel;
         private AnnouncementOverviewViewModel _announcementOverviewViewModel;
+        private LiveStreamViewModel _liveStreamViewModel;
 
         public NewsOverviewViewModel NewsOverviewViewModel
         {
@@ -29,6 +32,16 @@ namespace Sunny.Core.ViewModels
             {
                 _announcementOverviewViewModel = value;
                 RaisePropertyChanged(() => AnnouncementOverviewViewModel);
+            }
+        }
+
+        public LiveStreamViewModel LiveStreamViewModel
+        {
+            get { return _liveStreamViewModel; }
+            set
+            {
+                _liveStreamViewModel = value;
+                RaisePropertyChanged(() => LiveStreamViewModel);
             }
         }
 
@@ -60,6 +73,17 @@ namespace Sunny.Core.ViewModels
             {
                 _mission = value;
                 RaisePropertyChanged(() => Mission);
+            }
+        }
+
+        public ICommand InitPushCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                {
+                    Mvx.Resolve<IMissionService>().InitPush(Mission.Id);
+                });
             }
         }
     }

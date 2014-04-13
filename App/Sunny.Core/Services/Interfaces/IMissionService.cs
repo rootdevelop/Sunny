@@ -9,6 +9,7 @@ namespace Sunny.Core.Services.Interfaces
     public interface IMissionService
     {
         Task<IList<Domain.Mission>> GetMissions();
+        Task InitPush(int missionId);
     }
 }
 

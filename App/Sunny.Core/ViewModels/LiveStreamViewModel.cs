@@ -9,8 +9,8 @@ namespace Sunny.Core.ViewModels
 {
     public class LiveStreamViewModel : BaseViewModel
     {
-        private string _userName;
-        private string _liveStreamUrl;
+        private string _userName = String.Empty;
+        private string _liveStreamUrl = String.Empty;
 
         public string LiveStreamUrl
         {
@@ -38,6 +38,11 @@ namespace Sunny.Core.ViewModels
             {
                 return new MvxCommand<string>(message => {  });
             }
+        }
+
+        public LiveStreamViewModel()
+        {
+            LiveStreamUrl = "http://media.infozen.cshls.lldns.net/infozen/media/media.m3u8";
         }
     }
 }

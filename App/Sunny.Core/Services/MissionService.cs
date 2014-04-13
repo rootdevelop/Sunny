@@ -1,4 +1,5 @@
-﻿using Sunny.Core.Services.Interfaces;
+﻿using System;
+using Sunny.Core.Services.Interfaces;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Sunny.Core.Net;
@@ -17,6 +18,11 @@ namespace Sunny.Core.Services
         public async Task<IList<Domain.Mission>> GetMissions()
         {
             return await _client.GetAsync<IList<Domain.Mission>>("Mission");
+        }
+
+        public async Task InitPush(int missionId)
+        {
+            await _client.GetAsync<bool>(String.Format("InitSunnyPush/{0}", missionId));
         }
     }
 }
