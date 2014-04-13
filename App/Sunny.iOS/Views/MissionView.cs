@@ -53,12 +53,18 @@ namespace Sunny.iOS.Views
                 
                 chatView.Text = "";
                 
+                var previousText = string.Empty;
+                
                 SunnySocket.MessageReceivedAsyncCallback = (string name, string message) =>
                 InvokeOnMainThread(() =>
                 {
-                    chatView.Text = name + " - " + message + "\n" + chatView.Text;
-                    chatView.Font = UIFont.FromName("HelveticaNeue-Bold", 15);
-                    chatView.TextColor = UIColor.FromRGBA(0.027f, 0.102f, 0.389f, 1.000f);
+                    if (message != previousText)
+                    {
+                        chatView.Text = name + " - " + message + "\n" + chatView.Text;
+                        chatView.Font = UIFont.FromName("HelveticaNeue-Bold", 15);
+                        chatView.TextColor = UIColor.FromRGBA(0.027f, 0.102f, 0.389f, 1.000f);
+                        previousText = message;
+                    }
                 });
                 
                 messageField.ShouldReturn += (x) =>
@@ -122,10 +128,10 @@ namespace Sunny.iOS.Views
 
                 notifyButton.TouchUpInside += (sender, e) =>
                 {
+                    notifyButton.Enabled = false;
                     new UIAlertView("Thank you", "You'll receive a notification when we go fly fly (or boom boom)", null, "Ok").Show();
                 };
             
-                // Perform any additional setup after loading the view, typically from a nib.
                 var imageViewLoader = new MvxImageViewLoader(() => this.imageView);
                         
                 var set = this.CreateBindingSet<MissionView, MissionViewModel>();

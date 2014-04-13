@@ -15,19 +15,10 @@ namespace Sunny.iOS.Views
         {
         }
 
-        public override void DidReceiveMemoryWarning()
-        {
-            // Releases the view if it doesn't have a superview.
-            base.DidReceiveMemoryWarning();
-			
-            // Release any cached data, images, etc that aren't in use.
-        }
-
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 			
-            // Perform any additional setup after loading the view, typically from a nib.
             var tableView = new UITableView();
             tableView.Frame = new RectangleF(70, 144, 884, 654);
             tableView.RowHeight = 150;
