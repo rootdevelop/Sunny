@@ -4,28 +4,35 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp" />
+        android:src="@drawable/all_of_us"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/imageView1"
+        android:maxWidth="200dp" />
     <TextView
-        android:layout_width="fill_parent"
+        android:text="Arjan, Robbert, Jeffrey, Wendy, Hans"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@id/imageView1"
         android:id="@+id/textView1"
-        android:text="F.l.t.r. Arjan, Robbert, Jeffrey, Wendy, Hans" />
+        android:textStyle="normal" />
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/textView1"
-        local:MvxBind="Text AboutProjectText" />
-    <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="12dp"
+        android:layout_below="@id/textView1"
+        android:id="@+id/textView2"
+        local:MvxBind="Text AboutProjectText"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
         android:id="@+id/textView3"
-        android:layout_below="@+id/textView2"
-        android:gravity="center_vertical"
-        local:MvxBind="Text AboutTechStuffText" />
+        local:MvxBind="Text AboutTechStuffText"
+        android:layout_marginTop="10dp" />
 </RelativeLayout>
