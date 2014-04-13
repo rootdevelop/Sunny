@@ -61,8 +61,11 @@ namespace Sunny.Core.ViewModels
             {
                 return new MvxCommand(() =>
                 {
-                    SunnySocket.SendMessage(UserName, Message);
-                    Message = "";
+                    if (!String.IsNullOrWhiteSpace(Message))
+                    {
+                        SunnySocket.SendMessage(UserName, Message);
+                        Message = "";
+                    }
                 });
             }
         }
