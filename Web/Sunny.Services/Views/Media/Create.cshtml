@@ -211,7 +211,7 @@
             @Html.LabelFor(model => model.Date, new { @class = "control-label col-md-2" })
             <div class="col-sm-3">
                 <div class="input-group">
-                    <input value="@Model.Date" name="Date" class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" />
+                    <input value="@DateTime.Now.ToString("dd-MM-yyyy")" name="Date" class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" />
                     <span class="input-group-addon">
                         <i class="icon-calendar bigger-110"></i>
                     </span>

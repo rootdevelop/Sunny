@@ -6,7 +6,55 @@
                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                 mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <AppBar x:Name="BottomAppBar"
+                Padding="0,0,0,0"
+                AutomationProperties.Name="Bottom App Bar"
+                Background="#FF0099CC"
+                Height="100"
+                BorderBrush="{x:Null}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*" />
+                    <ColumnDefinition Width="50*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Name="LeftPanel"
+                            Orientation="Horizontal"
+                            Grid.Column="0"
+                            HorizontalAlignment="Left">
 
+                    <StackPanel   Margin="30,30,0,0">
+                        <Button  HorizontalAlignment="Center"
+                                 Command="{Binding ShowNewsViewCommand}"
+                                 Width="200">
+                            <TextBlock>News</TextBlock>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel   Margin="30,30,0,0">
+                        <Button  HorizontalAlignment="Center"
+                                 Command="{Binding ShowStreamViewCommand}"
+                                 Width="200">
+                            <TextBlock>Live stream</TextBlock>
+                        </Button>
+                    </StackPanel>
+                   
+                </StackPanel>
+                <StackPanel x:Name="RightPanel"
+                            Orientation="Horizontal"
+                            Grid.Column="1"
+                            HorizontalAlignment="Right">
+
+                    <StackPanel   Margin="0,30,30,0">
+                        <Button  HorizontalAlignment="Center"
+                                 Command="{Binding ShowAboutViewCommand}"
+                                 Width="200">
+                            <TextBlock>About</TextBlock>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
     <Grid x:Name="Earth"
           Background="#FF00041D">
         <Grid.RowDefinitions>
@@ -25,17 +73,17 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Canvas>
-                        <Button BorderBrush="Blue"
-                                BorderThickness="5"
+                        <Button BorderBrush="White"
+                                BorderThickness="1"
                                 Canvas.Left="{Binding X}"
                                 Canvas.Top="{Binding Y}"
-                                Background="Transparent"
+                                Background="Black"
                                 Command="{Binding ElementName=PageRoot,Path=DataContext.ShowMissionCommand}"
                                 CommandParameter="{Binding}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="{Binding Name}" />
-                                <TextBlock Text="{Binding X}" />
-                                <TextBlock Text="{Binding Y}" />
+                                <!--<TextBlock Text="{Binding X}" />
+                                <TextBlock Text="{Binding Y}" />-->
                             </StackPanel>
                         </Button>
                     </Canvas>
