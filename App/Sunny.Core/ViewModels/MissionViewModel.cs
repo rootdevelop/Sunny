@@ -1,5 +1,6 @@
 ﻿using System;
 using Cirrious.CrossCore;
+using Sunny.Core.Business;
 using Sunny.Core.Services.Interfaces;
 using Sunny.Core.ViewModels;
 using System.Collections;
@@ -50,6 +51,7 @@ namespace Sunny.Core.ViewModels
             GetMission(id);
             NewsOverviewViewModel = new NewsOverviewViewModel(id);
             AnnouncementOverviewViewModel = new AnnouncementOverviewViewModel(id);
+
         }
 
         private async void GetMission(int id)

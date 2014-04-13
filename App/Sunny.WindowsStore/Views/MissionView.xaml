@@ -85,7 +85,7 @@
                            Stretch="Uniform" />
 
                 </StackPanel>
-                <StackPanel Visibility="{Binding Mission.LiveStream}"
+                <StackPanel Visibility="{Binding Mission.LiveStream, Converter={StaticResource VisibilityConverter}}"
                             Width="600">
                     <Canvas x:Name="CapgeminiMpCanvas"
                             Width="600"
@@ -119,14 +119,36 @@
                     </WebView>
                 </StackPanel>
                 <StackPanel Margin="40,0,0,0">
-
-
                     <GridView x:Name="NewsCollectionGridView"
                               DataContext="{Binding NewsOverviewViewModel}"
                               AutomationProperties.AutomationId="NewsCollectionGridView"
                               AutomationProperties.Name="Grouped Items"
                               ItemsSource="{Binding News}"
                               ItemTemplate="{StaticResource NewsHubItemTemplate}"
+                              ScrollViewer.HorizontalScrollMode="Disabled"
+                              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                              ScrollViewer.VerticalScrollMode="Disabled"
+                              ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                              SelectionMode="None"
+                              IsSwipeEnabled="false"
+                              IsItemClickEnabled="True">
+
+                        <GridView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VariableSizedWrapGrid Orientation="Vertical"
+                                                       MaximumRowsOrColumns="2"
+                                                       Margin="0,0,0,10" />
+                            </ItemsPanelTemplate>
+                        </GridView.ItemsPanel>
+                    </GridView>
+                </StackPanel>
+
+                <StackPanel Margin="40,0,0,0">
+                    <GridView DataContext="{Binding AnnouncementOverviewViewModel}"
+                              AutomationProperties.AutomationId="AnnouncementCollectionGridView"
+                              AutomationProperties.Name="Grouped Items"
+                              ItemsSource="{Binding Announcements}"
+                              ItemTemplate="{StaticResource AnnouncementHubItemTemplate}"
                               ScrollViewer.HorizontalScrollMode="Disabled"
                               ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                               ScrollViewer.VerticalScrollMode="Disabled"

@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
-using Sunny.Core.Domain;
+using Sunny.Core.Business;
 using Cirrious.MvvmCross.ViewModels;
+using Mission = Sunny.Core.Domain.Mission;
 
 namespace Sunny.Core.ViewModels
 {
@@ -16,6 +17,7 @@ namespace Sunny.Core.ViewModels
         async void GetMissions()
         {
             Missions = (await Business.Mission.GetMissions()).Where(x => x.MainPage).ToList();
+            await SunnySocket.Init();
         }
 
         private IList<Mission> _missions;

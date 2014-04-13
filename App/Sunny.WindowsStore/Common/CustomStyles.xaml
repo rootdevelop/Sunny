@@ -36,5 +36,27 @@
             </StackPanel>
         </Grid>
     </DataTemplate>
-    
+
+    <DataTemplate x:Key="AnnouncementHubItemTemplate">
+        <Grid HorizontalAlignment="Left"
+              Width="250"
+              Height="250">
+            <Border BorderBrush="{StaticResource DarkGoldTextColor}"
+                    BorderThickness="1">
+                <Image Source="ms-appx:///Assets/nasanews.jpg"
+                       Width="250"
+                       Stretch="Uniform"
+                       AutomationProperties.Name="{Binding Title}" />
+            </Border>
+            <StackPanel VerticalAlignment="Bottom"
+                        Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}"
+                        Height="55">
+                <TextBlock Text="{Binding Title}"
+                           Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}"
+                           Style="{StaticResource ContentNormalTextStyle}"
+                           Margin="15,0,15,0" />
+            </StackPanel>
+        </Grid>
+    </DataTemplate>
+
 </ResourceDictionary>
