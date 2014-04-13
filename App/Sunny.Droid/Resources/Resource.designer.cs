@@ -1019,6 +1019,9 @@ namespace Sunny.Droid
 			// aapt resource value: 0x7f05003a
 			public const int submit_area = 2131034170;
 			
+			// aapt resource value: 0x7f050041
+			public const int subscribeMenuItem = 2131034177;
+			
 			// aapt resource value: 0x7f050002
 			public const int tabMode = 2131034114;
 			
@@ -1034,8 +1037,8 @@ namespace Sunny.Droid
 			// aapt resource value: 0x7f050003
 			public const int useLogo = 2131034115;
 			
-			// aapt resource value: 0x7f050041
-			public const int webView = 2131034177;
+			// aapt resource value: 0x7f050042
+			public const int webView = 2131034178;
 			
 			// aapt resource value: 0x7f05000c
 			public const int withText = 2131034124;
@@ -1151,16 +1154,25 @@ namespace Sunny.Droid
 			public const int item_mission = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int Main = 2130903067;
+			public const int item_news = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int MissionView = 2130903068;
+			public const int Main = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int SplashScreen = 2130903069;
+			public const int menu_mission_actions = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int support_simple_spinner_dropdown_item = 2130903070;
+			public const int MissionView = 2130903070;
+			
+			// aapt resource value: 0x7f03001f
+			public const int NewsFragment = 2130903071;
+			
+			// aapt resource value: 0x7f030020
+			public const int SplashScreen = 2130903072;
+			
+			// aapt resource value: 0x7f030021
+			public const int support_simple_spinner_dropdown_item = 2130903073;
 			
 			static Layout()
 			{
@@ -1225,6 +1237,9 @@ namespace Sunny.Droid
 			
 			// aapt resource value: 0x7f0a000d
 			public const int library_name = 2131361805;
+			
+			// aapt resource value: 0x7f0a0011
+			public const int subscribe = 2131361809;
 			
 			static String()
 			{

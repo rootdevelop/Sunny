@@ -19,7 +19,6 @@ namespace Sunny.Droid.Views
 	[Activity(Theme = "@style/Theme.AppCompat.Light.DarkActionBar", LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait)]
 	public class EarthView : MvxActionBarActivity
 		{
-		//static readonly string Tag = "Flyout";
 			DrawerLayout drawerLayout;
 			ActionBarDrawerToggle drawerToggle;
 			ListView drawerList;
@@ -33,7 +32,7 @@ namespace Sunny.Droid.Views
 				base.OnCreate(bundle);
 				SetContentView(Resource.Layout.Main);          
 
-			sections = new[] { "Missions" };
+			sections = new[] { "Missions", "News"};
 
 				drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 				drawerLayout.SetDrawerShadow(Resource.Drawable.drawer_shadow, (int)GravityFlags.Start);
@@ -77,9 +76,13 @@ namespace Sunny.Droid.Views
 				MvxFragment fragment = null;
 				switch (position)
 				{
-				case 0:
+					case 0:
 					fragment = new EarthViewFragment();
 					fragment.ViewModel = new EarthViewModel();
+					break;
+					case 1:
+					fragment = new NewsFragment();
+					fragment.ViewModel = new NewsOverviewViewModel();
 					break;
 				}
 

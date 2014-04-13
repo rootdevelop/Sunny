@@ -5,6 +5,7 @@ using Sunny.Core.ViewModels;
 using Android.Webkit;
 using Android.Net;
 using Android.Content;
+using Android.Views;
 
 namespace Sunny.Droid.Views
 {
@@ -45,5 +46,29 @@ namespace Sunny.Droid.Views
 			Finish();
 			return base.OnNavigateUp ();
 		}
+
+//		public override bool OnCreateOptionsMenu (IMenu menu)
+//		{
+//			MenuInflater inflater = GetMenuInflater();
+//			inflater.Inflate(Resource.Id.subscribeMenuItem, menu);
+//			return base.OnCreateOptionsMenu (menu);
+//		}
+//
+//		public override bool OnOptionsItemSelected (IMenuItem item)
+//		{
+//			switch (item.ItemId) {
+//			case Resource.Id.subscribeMenuItem:
+//				onSubscribe();
+//				return true;
+//			default:
+//				return base.OnOptionsItemSelected (item);
+//			}
+//		}
+//
+//		private void onSubscribe()
+//		{
+//			(ViewModel as MissionViewModel).InitPushCommand();
+//		}
+
     }
 }
