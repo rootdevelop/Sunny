@@ -155,6 +155,7 @@
   <ItemGroup>
     <Content Include="Assets\EUROPE 02 01 1920x1080.png" />
     <Content Include="Assets\GalaxyNGC3190_2560x1600.png" />
+    <Content Include="Assets\LiveFeedSOHO.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\nasanews.jpg" />
     <Content Include="Assets\SmallLogo.scale-100.png" />

@@ -63,7 +63,8 @@
 
 
         <ScrollViewer Grid.Row="1"
-                      Style="{StaticResource HorizontalScrollViewerStyle}">
+                      Style="{StaticResource HorizontalScrollViewerStyle}"
+                      Margin="0,0,-764,0">
             <StackPanel Orientation="Horizontal"
                         Margin="120,0,200,0">
                 <StackPanel Orientation="Vertical"
@@ -75,18 +76,22 @@
                            Margin="0,0,0,20"
                            Stretch="Uniform" />
 
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
                         <Button Content="Subscribe for notifications"
                                 Command="{Binding InitPushCommand}" />
                     </StackPanel>
 
-                    <Image Source="{Binding Mission.ImageUri}"
+                    <Image Source="ms-appx:///Assets/LiveFeedSOHO.png"
                            Width="280"
+                           Margin="0,20,0,0"
                            Stretch="Uniform" />
 
                 </StackPanel>
                 <StackPanel Visibility="{Binding Mission.LiveStream, Converter={StaticResource VisibilityConverter}}"
-                            Width="600">
+                            Orientation="Horizontal"
+                            VerticalAlignment="Top"
+                            Width="1200">
                     <Canvas x:Name="CapgeminiMpCanvas"
                             Width="600"
                             Height="336"
@@ -104,21 +109,30 @@
                                                      Source="http://media.infozen.cshls.lldns.net/infozen/media/media.m3u8"
                                                      AutoLoad="False" />
                     </Canvas>
-                    
-                    <ListBox x:Name="ChatListBox"
-                             Height="250"/>
-                    <StackPanel Orientation="Horizontal"
-                                DataContext="{Binding LiveStreamViewModel}">
-                        <TextBox Text="{Binding UserName, Mode=TwoWay}"
-                                 Width="100"
-                                 Margin="0,0,10,0" />
-                        <TextBox Text="{Binding Message, Mode=TwoWay}"
-                                 Width="250"
-                                 Margin="0,0,10,0" />
-                        <Button Content="Send!"
-                                Command="{Binding SendMessageCommand}"/>
+
+                    <StackPanel Orientation="Vertical"
+                                Margin="10">
+                        <ListBox x:Name="ChatListBox"
+                                 Width="600"
+                                 Height="300"
+                                 Margin="0,0,0,10"/>
+
+                        <StackPanel Orientation="Horizontal"
+                                    DataContext="{Binding LiveStreamViewModel}"
+                                    Margin="5,0,0,0">
+                            <TextBox Text="{Binding UserName, Mode=TwoWay}"
+                                     Width="100"
+                                     Margin="0,0,10,0" />
+                            <TextBox Text="{Binding Message, Mode=TwoWay}"
+                                     Width="360"
+                                     Margin="0,0,10,0"
+                                     KeyUp="UIElementOnKeyUp" />
+                            <Button Content="Send!"
+                                    Command="{Binding SendMessageCommand}" />
+                        </StackPanel>
                     </StackPanel>
                     
+
                 </StackPanel>
                 <StackPanel Width="740"
                             Margin="40,0,0,0">

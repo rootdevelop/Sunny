@@ -59,7 +59,11 @@ namespace Sunny.Core.ViewModels
         {
             get
             {
-                return new MvxCommand(() => { SunnySocket.SendMessage(UserName, Message); });
+                return new MvxCommand(() =>
+                {
+                    SunnySocket.SendMessage(UserName, Message);
+                    Message = "";
+                });
             }
         }
     }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -17,6 +18,7 @@ using Windows.UI.Xaml.Navigation;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 using Cirrious.CrossCore;
 using Sunny.Core.Business;
+using Sunny.Core.ViewModels;
 
 namespace Sunny.WindowsStore.Views
 {
@@ -52,6 +54,14 @@ namespace Sunny.WindowsStore.Views
 
             ChatListBox.UpdateLayout();
 
+        }
+
+        private void UIElementOnKeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Enter)
+            {
+                ((MissionViewModel)ViewModel).LiveStreamViewModel.SendMessageCommand.Execute(null);
+            }
         }
     }
 }

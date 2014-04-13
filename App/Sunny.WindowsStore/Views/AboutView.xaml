@@ -21,8 +21,7 @@
               x:Name="contentRegion" />
 
         <!-- Back button and page title -->
-        <Grid DataContext="{Binding Mission}"
-              Background="#99000000">
+        <Grid Background="#99000000">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120" />
                 <ColumnDefinition Width="*" />
