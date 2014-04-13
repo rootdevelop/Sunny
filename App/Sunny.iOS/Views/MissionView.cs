@@ -7,6 +7,7 @@ using Cirrious.MvvmCross.Binding.BindingContext;
 using Sunny.Core.ViewModels;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using MonoTouch.AVFoundation;
+using Sunny.Core.Business;
 
 namespace Sunny.iOS.Views
 {
@@ -28,6 +29,10 @@ namespace Sunny.iOS.Views
             
             if (((MissionViewModel)ViewModel).Mission.LiveStream)
             {
+                chatView.Hidden = false;
+                messageField.Hidden = false;
+                sendButton.Hidden = false;
+                
                 firstTitle.Hidden = true;
                 secondTitle.Hidden = true;
                 imageView.Hidden = true;
@@ -40,13 +45,44 @@ namespace Sunny.iOS.Views
                 _player = new AVPlayer(_playerItem);
 
                 _playerLayer = AVPlayerLayer.FromPlayer(_player);
-                _playerLayer.Frame = new RectangleF(150, 150, 724, 500);
+                _playerLayer.Frame = new RectangleF(21, 88, 602, 311);
                 View.Layer.AddSublayer(_playerLayer);
-                
                 _player.Play();
+                
+                ((MissionViewModel)ViewModel).LiveStreamViewModel.UserName = "AstroBoy";
+                
+                chatView.Text = "";
+                
+                SunnySocket.MessageReceivedAsyncCallback = (string name, string message) =>
+                InvokeOnMainThread(() =>
+                {
+                    chatView.Text = name + " - " + message + "\n" + chatView.Text;
+                    chatView.Font = UIFont.FromName("HelveticaNeue-Bold", 15);
+                    chatView.TextColor = UIColor.FromRGBA(0.027f, 0.102f, 0.389f, 1.000f);
+                });
+                
+                messageField.ShouldReturn += (x) =>
+                {
+                    ((MissionViewModel)ViewModel).LiveStreamViewModel.SendMessageCommand.Execute(null); 
+                    return true;
+                };
+                
+                chatView.BecomeFirstResponder();
+                
+                
+                var set = this.CreateBindingSet<MissionView, MissionViewModel>();
+                set.Bind(title).To(vm => vm.Mission.Name);
+                set.Bind(messageField).To(vm => vm.LiveStreamViewModel.Message);
+                set.Bind(backButton).To("GoBackCommand"); 
+                set.Bind(sendButton).To("LiveStreamViewModel.SendMessageCommand"); 
+                set.Apply();
             }
             else
             {
+                chatView.Hidden = true;
+                messageField.Hidden = true;
+                sendButton.Hidden = true;
+                
                 var imageBorder = new UIButton(UIButtonType.System);
                 imageBorder.Frame = new RectangleF(imageView.Frame.X - 1, imageView.Frame.Y - 1, imageView.Frame.Width + 2, imageView.Frame.Height + 2);
                 imageBorder.BackgroundColor = UIColor.Clear;
@@ -106,9 +142,7 @@ namespace Sunny.iOS.Views
             
                 webview.ShouldStartLoad += shouldStartLoad; 
             }
-            
-            
-            
+                   
         }
 
         private bool shouldStartLoad(UIWebView webView, NSUrlRequest request, UIWebViewNavigationType navigationType)
@@ -120,6 +154,14 @@ namespace Sunny.iOS.Views
             }
             
             return true;
+        }
+
+        public override void ViewWillDisappear(bool animated)
+        {
+            if (_player != null)
+                _player.Pause();
+           
+            base.ViewWillDisappear(animated);
         }
     }
 }

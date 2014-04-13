@@ -7,9 +7,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MissionView">
             <connections>
                 <outlet property="backButton" destination="QDq-zF-ZTZ" id="wFk-Gk-hl8"/>
+                <outlet property="chatView" destination="NwP-fC-GUG" id="4Nn-uS-8JV"/>
                 <outlet property="firstTitle" destination="HLV-ug-EAY" id="XUV-Tx-laA"/>
                 <outlet property="imageView" destination="Avw-MX-ARm" id="1zw-Pk-AsV"/>
+                <outlet property="messageField" destination="tQU-dT-eR6" id="va1-aY-r1x"/>
                 <outlet property="secondTitle" destination="Np9-3x-cPl" id="gRv-vd-R03"/>
+                <outlet property="sendButton" destination="DFN-Rz-fAl" id="rjp-5Q-qTd"/>
                 <outlet property="title" destination="9Z0-HT-4sS" id="6hj-NF-wid"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
@@ -57,6 +60,30 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="Name - hello there" selectable="NO" id="NwP-fC-GUG">
+                    <rect key="frame" x="663" y="88" width="352" height="273"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.098257034843768021" green="0.22653040263617666" blue="0.4344308035714286" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DFN-Rz-fAl">
+                    <rect key="frame" x="960" y="369" width="44" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                    <state key="normal" title="SEND">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter message here" minimumFontSize="17" clearButtonMode="whileEditing" id="tQU-dT-eR6">
+                    <rect key="frame" x="663" y="369" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>

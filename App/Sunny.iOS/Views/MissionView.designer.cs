@@ -16,6 +16,9 @@ namespace Sunny.iOS.Views
 		MonoTouch.UIKit.UIButton backButton { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UITextView chatView { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIWebView content { get; set; }
 
 		[Outlet]
@@ -25,7 +28,13 @@ namespace Sunny.iOS.Views
 		MonoTouch.UIKit.UIImageView imageView { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UITextField messageField { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UILabel secondTitle { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton sendButton { get; set; }
 
 		[Outlet]
 		MonoTouch.UIKit.UILabel title { get; set; }
@@ -42,9 +51,19 @@ namespace Sunny.iOS.Views
 				content = null;
 			}
 
+			if (firstTitle != null) {
+				firstTitle.Dispose ();
+				firstTitle = null;
+			}
+
 			if (imageView != null) {
 				imageView.Dispose ();
 				imageView = null;
+			}
+
+			if (secondTitle != null) {
+				secondTitle.Dispose ();
+				secondTitle = null;
 			}
 
 			if (title != null) {
@@ -52,14 +71,19 @@ namespace Sunny.iOS.Views
 				title = null;
 			}
 
-			if (firstTitle != null) {
-				firstTitle.Dispose ();
-				firstTitle = null;
+			if (chatView != null) {
+				chatView.Dispose ();
+				chatView = null;
 			}
 
-			if (secondTitle != null) {
-				secondTitle.Dispose ();
-				secondTitle = null;
+			if (messageField != null) {
+				messageField.Dispose ();
+				messageField = null;
+			}
+
+			if (sendButton != null) {
+				sendButton.Dispose ();
+				sendButton = null;
 			}
 		}
 	}
