@@ -75,6 +75,12 @@
     <Reference Include="Cirrious.MvvmCross.Droid">
       <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1\lib\MonoAndroid\Cirrious.MvvmCross.Droid.dll</HintPath>
     </Reference>
+    <Reference Include="ByteSmith.WindowsAzure.Messaging.Android">
+      <HintPath>..\_references\ByteSmith.WindowsAzure.Messaging.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.Client.MonoForAndroid">
+      <HintPath>..\_references\PushSharp.Client.MonoForAndroid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -84,6 +90,7 @@
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Views\EarthView.cs" />
+    <Compile Include="BroadcastReceiver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

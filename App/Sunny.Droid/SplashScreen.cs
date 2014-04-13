@@ -1,11 +1,13 @@
 using Android.App;
 using Android.Content.PM;
 using Cirrious.MvvmCross.Droid.Views;
+using ByteSmith.WindowsAzure.Messaging;
+using PushSharp.Client;
 
 namespace Sunny.Droid
 {
     [Activity(
-		Label = "Sunny.Droid"
+        Label = "Sunny.Droid"
 		, MainLauncher = true
 		, Icon = "@drawable/icon"
 		, Theme = "@style/Theme.Splash"
