@@ -225,10 +225,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Hubs\SunnyHub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PushService.cs" />
     <Compile Include="Controllers\MediaController.cs" />
     <Compile Include="Controllers\MissionController.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -377,7 +379,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Hub\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
