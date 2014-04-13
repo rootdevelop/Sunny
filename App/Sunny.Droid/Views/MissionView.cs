@@ -8,7 +8,7 @@ using Android.Content;
 
 namespace Sunny.Droid.Views
 {
-    [Activity(Label = "")]
+	[Activity(Theme = "@style/Theme.AppCompat.Light.DarkActionBar")]
 	public class MissionView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -16,12 +16,13 @@ namespace Sunny.Droid.Views
             base.OnCreate(bundle);
 			SetContentView(Resource.Layout.MissionView);
 
+			ActionBar.SetDisplayHomeAsUpEnabled(true);
+			ActionBar.Title = (ViewModel as MissionViewModel).Mission.Name;
+
 			var html = (ViewModel as MissionViewModel).Mission.Text;
 
 			var content = FindViewById<WebView>(Resource.Id.webView);
 			content.LoadData(html, "text/html", "utf-8");
-			//            content.SetBackgroundColor(new Color(0x00000000));
-			//            content.SetLayerType(LayerType.Software, null);
 			content.SetWebViewClient(new LisztWebViewClient());
         }
 
@@ -37,6 +38,12 @@ namespace Sunny.Droid.Views
 				}
 				return false;
 			}
+		}
+
+		public override bool OnNavigateUp ()
+		{
+			Finish();
+			return base.OnNavigateUp ();
 		}
     }
 }
