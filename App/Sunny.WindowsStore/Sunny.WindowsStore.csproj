@@ -154,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\EUROPE 02 01 1920x1080.png" />
+    <Content Include="Assets\GalaxyNGC3190_2560x1600.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
@@ -167,6 +168,7 @@
     <Content Include="Assets\SunnyApp_620x300.png" />
     <Content Include="Assets\SunnyApp_70x70.scale-100.png" />
     <Content Include="Assets\SunnyApp_800x800 %28org%29.png" />
+    <Content Include="Assets\SunnyText.png" />
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -272,6 +274,20 @@
       <Project>{131c4d5f-79cb-40ab-98c2-7483d87510ec}</Project>
       <Name>Sunny.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.Media.AdaptiveStreamingClient, Version=1.0">
+      <Name>Microsoft Smooth Streaming Client SDK for Windows 8.1</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.PlayerFramework.Xaml, Version=1.8.2.2">
+      <Name>Microsoft Player Framework</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.PlayerFramework.Xaml.Adaptive, Version=1.8.2.2">
+      <Name>Microsoft Player Framework Adaptive Streaming Plugin</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
