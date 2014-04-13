@@ -7,7 +7,7 @@ using PushSharp.Client;
 namespace Sunny.Droid
 {
     [Activity(
-        Label = "Sunny.Droid"
+        Label = "Sunny"
 		, MainLauncher = true
 		, Icon = "@drawable/icon"
 		, Theme = "@style/Theme.Splash"
