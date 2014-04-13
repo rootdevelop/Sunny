@@ -13,7 +13,7 @@ namespace Sunny.Droid.Views
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.EarthView);
             
-            RegisterWithGCM();
+			RegisterWithGCM();
 
         }
 
