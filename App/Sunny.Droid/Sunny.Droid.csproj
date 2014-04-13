@@ -91,6 +91,7 @@
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Views\EarthView.cs" />
     <Compile Include="BroadcastReceiver.cs" />
+    <Compile Include="Views\MissionView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -105,6 +106,8 @@
     <AndroidResource Include="Resources\values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\values\SplashStyle.xml" />
     <AndroidResource Include="Resources\layout\EarthView.axml" />
+    <AndroidResource Include="Resources\layout\MissionView.axml" />
+    <AndroidResource Include="Resources\layout\item_mission.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
