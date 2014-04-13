@@ -66,16 +66,15 @@ namespace Sunny.iOS.Views
                     ((MissionViewModel)ViewModel).LiveStreamViewModel.SendMessageCommand.Execute(null); 
                     return true;
                 };
-                
-                chatView.BecomeFirstResponder();
-                
-                
+                    
                 var set = this.CreateBindingSet<MissionView, MissionViewModel>();
                 set.Bind(title).To(vm => vm.Mission.Name);
                 set.Bind(messageField).To(vm => vm.LiveStreamViewModel.Message);
                 set.Bind(backButton).To("GoBackCommand"); 
                 set.Bind(sendButton).To("LiveStreamViewModel.SendMessageCommand"); 
                 set.Apply();
+                
+                messageField.BecomeFirstResponder();
             }
             else
             {

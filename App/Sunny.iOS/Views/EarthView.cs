@@ -64,8 +64,9 @@ namespace Sunny.iOS.Views
                         var missionView = new UIButton(UIButtonType.System);
                         missionView.SetTitle(mission.Name, UIControlState.Normal);
                         missionView.Frame = new RectangleF(mission.X, mission.Y, 100, 40);
-                        missionView.BackgroundColor = UIColor.Clear;
-                        missionView.SetTitleColor(UIColor.FromRGBA(0.537f, 0.816f, 0.992f, 1.000f), UIControlState.Normal);
+                        missionView.BackgroundColor = UIColor.FromRGBA(0.027f, 0.102f, 0.389f, 1.000f);
+                        
+                        missionView.SetTitleColor(UIColor.White, UIControlState.Normal);
                         missionView.Layer.BorderColor = UIColor.FromRGBA(0.008f, 0.137f, 0.620f, 1.000f).CGColor;
                         missionView.Layer.CornerRadius = 4;
                         missionView.Layer.BorderWidth = 1;

@@ -28,6 +28,11 @@ namespace Sunny.iOS.Views
 			
             // Perform any additional setup after loading the view, typically from a nib.
             
+            forkmeButton.TouchUpInside += (sender, e) =>
+            {
+                UIApplication.SharedApplication.OpenUrl(NSUrl.FromString("https://github.com/rootdevelop/Sunny"));
+            };
+            
             var set = this.CreateBindingSet<AboutView, AboutViewModel>();
             set.Bind(backButton).To("GoBackCommand"); 
             set.Apply();
