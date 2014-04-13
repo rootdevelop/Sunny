@@ -55,8 +55,7 @@ namespace Sunny.Core.ViewModels
         {
             get
             {
-                var blaat = 0;
-                return new MvxCommand(() => ShowViewModel<NewsOverviewViewModel>(new { result = blaat }));
+                return new MvxCommand(() => ShowViewModel<NewsOverviewViewModel>(new { id = 0 }));
             }
         }
     }
