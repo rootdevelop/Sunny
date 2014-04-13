@@ -74,7 +74,6 @@
     <Compile Include="Services\MissionService.cs" />
     <Compile Include="Business\Mission.cs" />
     <Compile Include="ViewModels\AboutViewModel.cs" />
-    <Compile Include="ViewModels\NewsViewModel.cs" />
     <Compile Include="ViewModels\StreamViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
