@@ -9,11 +9,7 @@ namespace Sunny.Core.ViewModels
 {
     public class AnnouncementOverviewViewModel : BaseViewModel
     {
-        public AnnouncementOverviewViewModel()
-        {
-        }
-
-        public void Init(int id)
+        public AnnouncementOverviewViewModel(int id)
         {
             GetAnnouncementForMissionId(id);
         }

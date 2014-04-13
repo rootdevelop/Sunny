@@ -9,9 +9,34 @@ namespace Sunny.Core.ViewModels
 {
     public class MissionViewModel : BaseViewModel
     {
+        private NewsOverviewViewModel _newsOverviewViewModel;
+        private AnnouncementOverviewViewModel _announcementOverviewViewModel;
+
+        public NewsOverviewViewModel NewsOverviewViewModel
+        {
+            get { return _newsOverviewViewModel; }
+            set
+            {
+                _newsOverviewViewModel = value;
+                RaisePropertyChanged(() => NewsOverviewViewModel);
+            }
+        }
+
+        public AnnouncementOverviewViewModel AnnouncementOverviewViewModel
+        {
+            get { return _announcementOverviewViewModel; }
+            set
+            {
+                _announcementOverviewViewModel = value;
+                RaisePropertyChanged(() => AnnouncementOverviewViewModel);
+            }
+        }
+
         public void Init(int id)
         {
             GetMission(id);
+            NewsOverviewViewModel = new NewsOverviewViewModel(id);
+            AnnouncementOverviewViewModel = new AnnouncementOverviewViewModel(id);
         }
 
         private async void GetMission(int id)

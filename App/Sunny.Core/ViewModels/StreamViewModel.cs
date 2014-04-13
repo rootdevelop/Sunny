@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sunny.Core.ViewModels
 {
-    class StreamViewModel : BaseViewModel
+    public class StreamViewModel : BaseViewModel
     {
     }
 }

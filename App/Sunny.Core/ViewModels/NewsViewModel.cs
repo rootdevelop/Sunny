@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sunny.Core.ViewModels
 {
-    class NewsViewModel : BaseViewModel
+    public class NewsViewModel : BaseViewModel
     {
 
     }
