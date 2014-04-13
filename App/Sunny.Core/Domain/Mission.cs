@@ -10,6 +10,7 @@ namespace Sunny.Core.Domain
         public string Name { get; set; }
 
         public DateTime Date { get; set; }
+        public string DateAsString { get { return Date.ToString("yyyy-MM-dd"); } }
 
         public string Text { get; set; }
 

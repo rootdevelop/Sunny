@@ -135,14 +135,14 @@
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MissionOverviewView.xaml.cs">
+      <DependentUpon>MissionOverviewView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MissionView.xaml.cs">
       <DependentUpon>MissionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\NewsView.xaml.cs">
-      <DependentUpon>NewsView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\StreamView.xaml.cs">
-      <DependentUpon>StreamView.xaml</DependentUpon>
+    <Compile Include="Views\NewsOverviewView.xaml.cs">
+      <DependentUpon>NewsOverviewView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -201,15 +201,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\MissionOverviewView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\MissionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\NewsView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\StreamView.xaml">
+    <Page Include="Views\NewsOverviewView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

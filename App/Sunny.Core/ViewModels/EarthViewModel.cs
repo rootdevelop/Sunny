@@ -51,6 +51,14 @@ namespace Sunny.Core.ViewModels
             }
         }
 
+        public ICommand ShowMissionOverviewCommand
+        {
+            get
+            {
+                return new MvxCommand(() => ShowViewModel<MissionOverviewViewModel>());
+            }
+        }
+
         public ICommand ShowNewsOverviewViewCommand
         {
             get

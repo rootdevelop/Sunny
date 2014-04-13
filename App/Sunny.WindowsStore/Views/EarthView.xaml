@@ -25,16 +25,16 @@
 
                     <StackPanel   Margin="30,30,0,0">
                         <Button  HorizontalAlignment="Center"
-                                 Command="{Binding ShowNewsViewCommand}"
+                                 Command="{Binding ShowNewsOverviewViewCommand}"
                                  Width="200">
                             <TextBlock>News</TextBlock>
                         </Button>
                     </StackPanel>
                     <StackPanel   Margin="30,30,0,0">
                         <Button  HorizontalAlignment="Center"
-                                 Command="{Binding ShowStreamViewCommand}"
+                                 Command="{Binding ShowMissionOverviewCommand}"
                                  Width="200">
-                            <TextBlock>Live stream</TextBlock>
+                            <TextBlock>Mission Overview</TextBlock>
                         </Button>
                     </StackPanel>
 

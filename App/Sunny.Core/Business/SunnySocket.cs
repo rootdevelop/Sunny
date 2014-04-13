@@ -28,13 +28,16 @@ namespace Sunny.Core.Business
 
         public static async Task Init() 
         {
-            _socketHub = new SocketHub();
-            _socketHub.MesssageReceivedAsyncCallback = (s, s1) =>
+            if (_socketHub == null || !_socketHub.IsInitialized())
             {
-                InvokeMessageReceivedAsyncCallback(s, s1);
-            };
+                _socketHub = new SocketHub();
+                _socketHub.MesssageReceivedAsyncCallback = (s, s1) =>
+                {
+                    InvokeMessageReceivedAsyncCallback(s, s1);
+                };
 
-            await _socketHub.Init();
+                await _socketHub.Init();
+            }
         }
 
         public static async void SendMessage(string name, string message)
