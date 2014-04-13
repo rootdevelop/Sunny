@@ -37,7 +37,7 @@
                             <TextBlock>Live stream</TextBlock>
                         </Button>
                     </StackPanel>
-                   
+
                 </StackPanel>
                 <StackPanel x:Name="RightPanel"
                             Orientation="Horizontal"
@@ -58,16 +58,22 @@
     <Grid x:Name="Earth"
           Background="#FF00041D">
         <Grid.RowDefinitions>
+            <RowDefinition Height="140" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Image Grid.Row="0"
+               Grid.RowSpan="2"
                HorizontalAlignment="Left"
                Source="ms-appx:///Assets/EUROPE 02 01 1920x1080.png"
                Stretch="Uniform" />
-        <Image />
 
-        <ItemsControl Grid.Row="0"
+        <Grid Grid.Row="0">
+            <Image Source="ms-appx:///Assets/SunnyText.png"
+                   Height="100" />
+        </Grid>
+
+        <ItemsControl Grid.Row="1"
                       ItemsSource="{Binding Missions}"
                       Margin="0">
             <ItemsControl.ItemTemplate>

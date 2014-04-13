@@ -21,6 +21,7 @@ namespace Sunny.Services.Domain
         public float X { get; set; }
         public float Y { get; set; }
         public bool MainPage { get; set; }
+        public bool LiveStream { get; set; }
 
         public IList<Media> Media { get; set; }
         public IList<News> News { get; set; }

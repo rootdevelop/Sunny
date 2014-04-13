@@ -1,5 +1,18 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+    <Style x:Key="HorizontalScrollViewerStyle"
+           TargetType="ScrollViewer">
+        <Setter Property="HorizontalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="VerticalScrollBarVisibility"
+                Value="Disabled" />
+        <Setter Property="HorizontalScrollMode"
+                Value="Enabled" />
+        <Setter Property="VerticalScrollMode"
+                Value="Disabled" />
+        <Setter Property="ZoomMode"
+                Value="Disabled" />
+    </Style>
     
 </ResourceDictionary>

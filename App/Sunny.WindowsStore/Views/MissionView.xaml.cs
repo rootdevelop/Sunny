@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+using Sunny.Core.Business;
 
 namespace Sunny.WindowsStore.Views
 {
@@ -25,6 +26,12 @@ namespace Sunny.WindowsStore.Views
         public MissionView()
         {
             this.InitializeComponent();
+            SunnySocket.MessageReceivedAsyncCallback = MessageReceivedAsyncCallback;
+        }
+
+        private void MessageReceivedAsyncCallback(string s, string s1)
+        {
+            ChatListBox.Items.Add(s + ": " + s1);
         }
     }
 }
