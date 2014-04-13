@@ -36,7 +36,9 @@ namespace Sunny.Core.ViewModels
         {
             get
             {
-                return new MvxCommand<string>(message => {  });
+                return new MvxCommand<string>(message =>
+                {
+                });
             }
         }
     }
