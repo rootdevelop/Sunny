@@ -61,7 +61,7 @@ namespace Sunny.Core.ViewModels
         {
             get
             {
-                return new MvxCommand(() => ShowViewModel<StreamViewModel>());
+                return new MvxCommand(() => ShowViewModel<LiveStreamViewModel>());
             }
         }
     }
