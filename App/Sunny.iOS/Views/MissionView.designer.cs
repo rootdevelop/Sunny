@@ -19,7 +19,13 @@ namespace Sunny.iOS.Views
 		MonoTouch.UIKit.UIWebView content { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UILabel firstTitle { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIImageView imageView { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel secondTitle { get; set; }
 
 		[Outlet]
 		MonoTouch.UIKit.UILabel title { get; set; }
@@ -44,6 +50,16 @@ namespace Sunny.iOS.Views
 			if (title != null) {
 				title.Dispose ();
 				title = null;
+			}
+
+			if (firstTitle != null) {
+				firstTitle.Dispose ();
+				firstTitle = null;
+			}
+
+			if (secondTitle != null) {
+				secondTitle.Dispose ();
+				secondTitle = null;
 			}
 		}
 	}

@@ -18,8 +18,10 @@ namespace Sunny.iOS
             this.DelayBind(() =>
             {
                 var set = this.CreateBindingSet<NewsTableViewCell, News>();
+                text.Editable = false;
+                text.ScrollEnabled = false;
                 set.Bind(title).To(x => x.Title);
-                set.Bind(text).To(x => x.Text);
+                set.Bind(text).To(x => x.IntroText);
                 set.Apply();
             });
         }

@@ -9,26 +9,19 @@ using System.CodeDom.Compiler;
 
 namespace Sunny.iOS.Views
 {
-	[Register ("NewsOverviewView")]
-	partial class NewsOverviewView
-	{
-		[Outlet]
-		MonoTouch.UIKit.UIButton backButton { get; set; }
+    [Register("NewsOverviewView")]
+    partial class NewsOverviewView
+    {
+        [Outlet]
+        MonoTouch.UIKit.UIButton backButton { get; set; }
 
-		[Outlet]
-		MonoTouch.UIKit.UITableView tableView { get; set; }
-		
-		void ReleaseDesignerOutlets ()
-		{
-			if (backButton != null) {
-				backButton.Dispose ();
-				backButton = null;
-			}
-
-			if (tableView != null) {
-				tableView.Dispose ();
-				tableView = null;
-			}
-		}
-	}
+        void ReleaseDesignerOutlets()
+        {
+            if (backButton != null)
+            {
+                backButton.Dispose();
+                backButton = null;
+            }
+        }
+    }
 }

@@ -28,7 +28,19 @@ namespace Sunny.iOS.Views
             base.ViewDidLoad();
 			
             // Perform any additional setup after loading the view, typically from a nib.
-        
+            var tableView = new UITableView();
+            tableView.Frame = new RectangleF(70, 144, 884, 654);
+            tableView.RowHeight = 150;
+            
+            var coolBorder = new UIButton(UIButtonType.System);
+            coolBorder.Frame = new RectangleF(tableView.Frame.X - 2, tableView.Frame.Y - 2, tableView.Frame.Width + 4, tableView.Frame.Height + 4);
+            coolBorder.BackgroundColor = UIColor.White;
+            coolBorder.Layer.BorderColor = UIColor.FromRGBA(0.631f, 0.816f, 0.922f, 1.000f).CGColor;
+            coolBorder.Layer.CornerRadius = 4;
+            coolBorder.Layer.BorderWidth = 1;
+            View.AddSubview(coolBorder);
+            View.AddSubview(tableView);
+
             var source = new MvxSimpleTableViewSource(tableView, NewsTableViewCell.Key, NewsTableViewCell.Key);
             tableView.Source = source;           
             
