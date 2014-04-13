@@ -44,7 +44,7 @@ namespace Sunny.iOS.Views
             
             var set = this.CreateBindingSet<EarthView, EarthViewModel>();
             set.Bind(aboutButton).To("ShowAboutViewCommand"); 
-            set.Bind(newsButton).To("ShowNewsViewCommand"); 
+            set.Bind(newsButton).To("ShowNewsOverviewViewCommand"); 
             set.Apply();
 
         }
