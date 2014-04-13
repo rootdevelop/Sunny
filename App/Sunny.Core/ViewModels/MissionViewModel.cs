@@ -51,7 +51,7 @@ namespace Sunny.Core.ViewModels
             GetMission(id);
             NewsOverviewViewModel = new NewsOverviewViewModel(id);
             AnnouncementOverviewViewModel = new AnnouncementOverviewViewModel(id);
-
+            LiveStreamViewModel = new LiveStreamViewModel();
         }
 
         private async void GetMission(int id)

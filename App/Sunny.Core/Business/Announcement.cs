@@ -11,24 +11,31 @@ namespace Sunny.Core.Business
 {
     public static class Announcement
     {
-        static readonly Dictionary<int, IList<Domain.Announcement>> NewsForMission = new Dictionary<int, IList<Domain.Announcement>>();
+        static readonly Dictionary<int, IList<Domain.Announcement>> AnnouncementsForMission = new Dictionary<int, IList<Domain.Announcement>>();
 
         public static async Task<IList<Domain.Announcement>> GetAnnouncementForMissionId(int id)
         {
             return await Retry.DoAsync(async () =>
             {
 
-                var news = await Mvx.Resolve<IAnnouncementService>().GetAnnouncementForMissionId(id);
-                NewsForMission.Add(id, news);
+                var announcements = await Mvx.Resolve<IAnnouncementService>().GetAnnouncementForMissionId(id);
+                if (AnnouncementsForMission.ContainsKey(id))
+                {
+                    AnnouncementsForMission[id] = announcements;
+                }
+                else
+                {
+                    AnnouncementsForMission.Add(id, announcements);
+                }
 
-                return news;
+                return announcements;
 
             }, new TimeSpan(0, 0, 0, 3));
         }
 
         public static async Task<Domain.Announcement> GetAnnouncement(int id)
         {
-            return NewsForMission.SelectMany(x => x.Value.Where(y => y.Id == id)).FirstOrDefault();
+            return AnnouncementsForMission.SelectMany(x => x.Value.Where(y => y.Id == id)).FirstOrDefault();
         }
     }
 }

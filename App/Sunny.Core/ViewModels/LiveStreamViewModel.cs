@@ -10,8 +10,8 @@ namespace Sunny.Core.ViewModels
 {
     public class LiveStreamViewModel : BaseViewModel
     {
-        public static Action<string, string> MessageReceivedAsyncCallback { get; set; }
         private string _userName = String.Empty;
+        private string _message = String.Empty;
         private string _liveStreamUrl = String.Empty;
 
         public LiveStreamViewModel()
@@ -22,8 +22,6 @@ namespace Sunny.Core.ViewModels
 
         private async void InitSocket()
         {
-            SunnySocket.MessageReceivedAsyncCallback = MessageReceivedAsyncCallback;
-
             await SunnySocket.Init();
         }
 
@@ -47,11 +45,21 @@ namespace Sunny.Core.ViewModels
             }
         }
 
+        public string Message
+        {
+            get { return _message; }
+            set
+            {
+                _message = value;
+                RaisePropertyChanged(() => Message);
+            }
+        }
+
         public ICommand SendMessageCommand
         {
             get
             {
-                return new MvxCommand<string>(message => { SunnySocket.SendMessage(UserName, message); });
+                return new MvxCommand(() => { SunnySocket.SendMessage(UserName, Message); });
             }
         }
     }

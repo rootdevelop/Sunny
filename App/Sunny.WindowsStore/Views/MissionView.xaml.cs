@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -14,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+using Cirrious.CrossCore;
 using Sunny.Core.Business;
 
 namespace Sunny.WindowsStore.Views
@@ -31,7 +33,10 @@ namespace Sunny.WindowsStore.Views
 
         private void MessageReceivedAsyncCallback(string s, string s1)
         {
-            ChatListBox.Items.Add(s + ": " + s1);
+            Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                ChatListBox.Items.Add(s + ": " + s1);
+            });
         }
     }
 }

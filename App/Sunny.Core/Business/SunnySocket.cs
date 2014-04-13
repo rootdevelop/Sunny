@@ -17,10 +17,22 @@ namespace Sunny.Core.Business
 
         }
 
+        /// <summary>
+        /// Executes the award success action on a different thread, and waits for the result.
+        /// </summary>
+        private static void InvokeMessageReceivedAsyncCallback(string name, string message)
+        {
+            var handler = MessageReceivedAsyncCallback;
+            if (handler != null) handler(name, message);
+        }
+
         public static async Task Init() 
         {
             _socketHub = new SocketHub();
-            _socketHub.MesssageReceivedAsyncCallback = MessageReceivedAsyncCallback;
+            _socketHub.MesssageReceivedAsyncCallback = (s, s1) =>
+            {
+                InvokeMessageReceivedAsyncCallback(s, s1);
+            };
 
             await _socketHub.Init();
         }

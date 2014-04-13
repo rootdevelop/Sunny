@@ -94,18 +94,29 @@
                         <Canvas.RenderTransform>
                             <TranslateTransform x:Name="CanvasMoverCapgemini" />
                         </Canvas.RenderTransform>
-                        <!--<playerFramework:MediaPlayer x:Name="PlayerCg"
+                        <playerFramework:MediaPlayer x:Name="PlayerCg"
                                                      IsResolutionIndicatorVisible="True"
                                                      IsInteractive="True"
                                                      IsFullScreen="False"
                                                      IsFullScreenVisible="False"
                                                      Width="600"
                                                      Height="336"
-                                                     Source="http://devplatem.vo.msecnd.net/Sintel/Sintel_H264.ism/manifest"
-                                                     AutoLoad="False" />-->
+                                                     Source="http://media.infozen.cshls.lldns.net/infozen/media/media.m3u8"
+                                                     AutoLoad="False" />
                     </Canvas>
                     
                     <ListBox x:Name="ChatListBox"/>
+                    <StackPanel Orientation="Horizontal"
+                                DataContext="{Binding LiveStreamViewModel}">
+                        <TextBox Text="{Binding UserName, Mode=TwoWay}"
+                                 Width="100"
+                                 Margin="0,0,10,0" />
+                        <TextBox Text="{Binding Message, Mode=TwoWay}"
+                                 Width="250"
+                                 Margin="0,0,10,0" />
+                        <Button Content="Send!"
+                                Command="{Binding SendMessageCommand}"/>
+                    </StackPanel>
                     
                 </StackPanel>
                 <StackPanel Width="740"
