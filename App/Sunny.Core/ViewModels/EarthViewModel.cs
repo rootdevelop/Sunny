@@ -49,19 +49,11 @@ namespace Sunny.Core.ViewModels
             }
         }
 
-        public ICommand ShowNewsViewCommand
+        public ICommand ShowNewsOverviewViewCommand
         {
             get
             {
-                return new MvxCommand(() => ShowViewModel<NewsOverviewViewModel>());
-            }
-        }
-
-        public ICommand ShowStreamViewCommand
-        {
-            get
-            {
-                return new MvxCommand(() => ShowViewModel<LiveStreamViewModel>());
+                return new MvxCommand(() => ShowViewModel<NewsOverviewViewModel>(new { id = 0 }));
             }
         }
     }
