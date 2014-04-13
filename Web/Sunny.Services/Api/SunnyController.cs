@@ -40,6 +40,18 @@ namespace Sunny.Services.Api
             await _db.SaveChangesAsync();
 
             await PushService.SendNotification(String.Format("Live stream for '{0}' has started!", mission.Name));
+
+            _timer = new Timer(ResetCallBack, missionsId, new TimeSpan(0, 0, 1, 0), new TimeSpan(-1));
+        }
+
+        private async void ResetCallBack(object state)
+        {
+            int missionsId = Convert.ToInt32(state);
+
+            var mission = await _db.Missions.FindAsync(missionsId);
+            mission.LiveStream = false;
+
+            await _db.SaveChangesAsync();
         }
     }
 }
