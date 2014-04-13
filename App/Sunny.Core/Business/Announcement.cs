@@ -9,16 +9,16 @@ using Sunny.Core.Utils;
 
 namespace Sunny.Core.Business
 {
-    public static class News
+    public static class Announcement
     {
-        static readonly Dictionary<int, IList<Domain.News>> NewsForMission = new Dictionary<int, IList<Domain.News>>();
+        static readonly Dictionary<int, IList<Domain.Announcement>> NewsForMission = new Dictionary<int, IList<Domain.Announcement>>();
 
-        public static async Task<IList<Domain.News>> GetNewsForMissionId(int id)
+        public static async Task<IList<Domain.Announcement>> GetAnnouncementForMissionId(int id)
         {
             return await Retry.DoAsync(async () =>
             {
 
-                var news = await Mvx.Resolve<INewsService>().GetNewsForMissionId(id);
+                var news = await Mvx.Resolve<IAnnouncementService>().GetAnnouncementForMissionId(id);
                 NewsForMission.Add(id, news);
 
                 return news;
@@ -26,7 +26,7 @@ namespace Sunny.Core.Business
             }, new TimeSpan(0, 0, 0, 3));
         }
 
-        public static async Task<Domain.News> GetNews(int id)
+        public static async Task<Domain.Announcement> GetAnnouncement(int id)
         {
             return NewsForMission.SelectMany(x => x.Value.Where(y => y.Id == id)).FirstOrDefault();
         }
