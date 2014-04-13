@@ -37,14 +37,6 @@ namespace Sunny.Core.ViewModels
                 RaisePropertyChanged(() => Mission);
             }
         }
-
-        public ICommand GoBackCommand
-        {
-            get
-            {
-                return new MvxCommand(() => Close(this));
-            }
-        }
     }
 }
 

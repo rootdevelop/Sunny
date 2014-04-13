@@ -1,4 +1,5 @@
-﻿using Cirrious.MvvmCross.Localization;
+﻿using System.Windows.Input;
+using Cirrious.MvvmCross.Localization;
 using Cirrious.MvvmCross.ViewModels;
 using Sunny.Core.Language;
 
@@ -17,6 +18,14 @@ namespace Sunny.Core.ViewModels
         public IMvxLanguageBinder SharedTextSource
         {
             get { return new MvxLanguageBinder(CustomTextProvider.GeneralNamespace, CustomTextProvider.SharedNamespace); }
+        }
+
+        public ICommand GoBackCommand
+        {
+            get
+            {
+                return new MvxCommand(() => Close(this));
+            }
         }
     }
 }

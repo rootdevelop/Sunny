@@ -64,6 +64,8 @@
     <Compile Include="Observable\ObservableBase.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Net\WebApiClient.cs" />
+    <Compile Include="ViewModels\AnnouncementOverviewViewModel.cs" />
+    <Compile Include="ViewModels\NewsOverviewViewModel.cs" />
     <Compile Include="ViewModels\EarthViewModel.cs" />
     <Compile Include="ViewModels\MissionOverviewViewModel.cs" />
     <Compile Include="ViewModels\MissionViewModel.cs" />
@@ -71,8 +73,6 @@
     <Compile Include="Services\MissionService.cs" />
     <Compile Include="Business\Mission.cs" />
     <Compile Include="ViewModels\AboutViewModel.cs" />
-    <Compile Include="ViewModels\NewsViewModel.cs" />
-    <Compile Include="ViewModels\StreamViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
