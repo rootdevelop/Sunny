@@ -118,6 +118,16 @@
 
                     </WebView>
                 </StackPanel>
+                <StackPanel Width="740"
+                            Margin="40,0,0,0">
+                    <WebView DefaultBackgroundColor="White"
+                             Width="700"
+                             Height="600"
+                             Margin="0,0,20,0"
+                             common:WebBrowserHelper.HTML="{Binding Mission.Text}">
+
+                    </WebView>
+                </StackPanel>
             </StackPanel>
         </ScrollViewer>
 
