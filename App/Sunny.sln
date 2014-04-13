@@ -257,7 +257,7 @@ Global
 		{E1B9FCA8-E48F-4694-89A1-029F5D07A611}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Sunny.iOS\Sunny.iOS.csproj
+		StartupItem = Sunny.Droid\Sunny.Droid.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
