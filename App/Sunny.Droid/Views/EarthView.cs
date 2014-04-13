@@ -28,13 +28,14 @@ namespace Sunny.Droid.Views
 			{ get { return base.ViewModel as EarthViewModel; } }
 
 			protected NewsOverviewViewModel NewsOverviewViewModel = new NewsOverviewViewModel();
+			protected AboutViewModel AboutViewModel= new AboutViewModel();
 
 			protected override void OnCreate(Bundle bundle)
 			{
 				base.OnCreate(bundle);
 				SetContentView(Resource.Layout.Main);          
 
-			sections = new[] { "Missions", "News"};
+			sections = new[] { "Missions", "News", "About"};
 
 				drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 				drawerLayout.SetDrawerShadow(Resource.Drawable.drawer_shadow, (int)GravityFlags.Start);
@@ -85,6 +86,10 @@ namespace Sunny.Droid.Views
 					case 1:
 					fragment = new NewsFragment();
 					fragment.ViewModel = NewsOverviewViewModel;
+					break;
+					case 2:
+					fragment = new AboutFragment();
+					fragment.ViewModel = AboutViewModel;
 					break;
 				}
 
