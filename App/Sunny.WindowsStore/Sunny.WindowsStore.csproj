@@ -171,6 +171,7 @@
     <Content Include="Assets\SunnyApp_70x70.scale-100.png" />
     <Content Include="Assets\SunnyApp_800x800 %28org%29.png" />
     <Content Include="Assets\SunnyText.png" />
+    <Content Include="Assets\Team.jpg" />
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -281,11 +282,11 @@
     <SDKReference Include="Microsoft.Media.AdaptiveStreamingClient, Version=1.0">
       <Name>Microsoft Smooth Streaming Client SDK for Windows 8.1</Name>
     </SDKReference>
-    <SDKReference Include="Microsoft.PlayerFramework.Xaml, Version=1.8.2.2">
-      <Name>Microsoft Player Framework</Name>
+    <SDKReference Include="Microsoft.PlayerFramework.Xaml, Version=2.0.0.0">
+      <Name>Microsoft Player Framework %28Microsoft.PlayerFramework.Xaml, Version=2.0.0.0%29</Name>
     </SDKReference>
-    <SDKReference Include="Microsoft.PlayerFramework.Xaml.Adaptive, Version=1.8.2.2">
-      <Name>Microsoft Player Framework Adaptive Streaming Plugin</Name>
+    <SDKReference Include="Microsoft.PlayerFramework.Xaml.Adaptive, Version=2.0.0.0">
+      <Name>Microsoft Player Framework Adaptive Streaming Plugin %28Microsoft.PlayerFramework.Xaml.Adaptive, Version=2.0.0.0%29</Name>
     </SDKReference>
     <SDKReference Include="Microsoft.VCLibs, Version=12.0">
       <Name>Microsoft Visual C++ 2013 Runtime Package for Windows</Name>

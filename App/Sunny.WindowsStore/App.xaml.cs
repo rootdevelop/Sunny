@@ -39,8 +39,9 @@ namespace Sunny.WindowsStore
         /// </summary>
         public App()
         {
-            this.InitializeComponent();
-            this.Suspending += OnSuspending;
+
+            InitializeComponent();
+            Suspending += OnSuspending;
 
             //BugSenseHandler.Instance.InitAndStartSession(new ExceptionManager(Current), "w8c25bb3");
         }
@@ -52,7 +53,9 @@ namespace Sunny.WindowsStore
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs args)
         {
+            #if(!DEBUG)
             InitNotificationsAsync();
+#endif
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,

@@ -15,12 +15,21 @@ namespace Sunny.iOS.Views
         [Outlet]
         MonoTouch.UIKit.UIButton backButton { get; set; }
 
+        [Outlet]
+        MonoTouch.UIKit.UIButton forkmeButton { get; set; }
+
         void ReleaseDesignerOutlets()
         {
             if (backButton != null)
             {
                 backButton.Dispose();
                 backButton = null;
+            }
+
+            if (forkmeButton != null)
+            {
+                forkmeButton.Dispose();
+                forkmeButton = null;
             }
         }
     }

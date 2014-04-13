@@ -260,6 +260,8 @@
     <BundleResource Include="Resources\moon%402x.png" />
     <BundleResource Include="Resources\mars%402x.png" />
     <BundleResource Include="Resources\nasaLogo%402x.png" />
+    <BundleResource Include="Resources\allOfUs%402x.png" />
+    <BundleResource Include="Resources\ForkMe%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />

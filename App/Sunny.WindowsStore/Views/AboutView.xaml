@@ -45,6 +45,9 @@
                            VerticalAlignment="Bottom"
                            Margin="0,0,30,40" />
         </Grid>
+        <Image Grid.Row="1"
+               Source="ms-appx:///Assets/Team.jpg" 
+               Margin="20"/>
     </Grid>
 
 </local:BaseView>
