@@ -118,15 +118,31 @@
 
                     </WebView>
                 </StackPanel>
-                <StackPanel Width="740"
-                            Margin="40,0,0,0">
-                    <WebView DefaultBackgroundColor="White"
-                             Width="700"
-                             Height="600"
-                             Margin="0,0,20,0"
-                             common:WebBrowserHelper.HTML="{Binding Mission.Text}">
+                <StackPanel Margin="40,0,0,0">
 
-                    </WebView>
+
+                    <GridView x:Name="NewsCollectionGridView"
+                              DataContext="{Binding NewsOverviewViewModel}"
+                              AutomationProperties.AutomationId="NewsCollectionGridView"
+                              AutomationProperties.Name="Grouped Items"
+                              ItemsSource="{Binding News}"
+                              ItemTemplate="{StaticResource NewsHubItemTemplate}"
+                              ScrollViewer.HorizontalScrollMode="Disabled"
+                              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                              ScrollViewer.VerticalScrollMode="Disabled"
+                              ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                              SelectionMode="None"
+                              IsSwipeEnabled="false"
+                              IsItemClickEnabled="True">
+
+                        <GridView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VariableSizedWrapGrid Orientation="Vertical"
+                                                       MaximumRowsOrColumns="2"
+                                                       Margin="0,0,0,10" />
+                            </ItemsPanelTemplate>
+                        </GridView.ItemsPanel>
+                    </GridView>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>
