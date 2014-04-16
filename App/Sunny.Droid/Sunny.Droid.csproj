@@ -120,7 +120,7 @@
     <Compile Include="Utils\MvxActionBarActivityEventSource.cs" />
     <Compile Include="Views\EarthViewFragment.cs" />
     <Compile Include="Views\NewsFragment.cs" />
-    <Compile Include="Views\AboutView.cs" />
+    <Compile Include="Views\AboutFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -145,6 +145,7 @@
     <AndroidResource Include="Resources\layout\NewsFragment.axml" />
     <AndroidResource Include="Resources\layout\item_news.axml" />
     <AndroidResource Include="Resources\layout\AboutFragment.axml" />
+    <AndroidResource Include="Resources\drawable\all_of_us.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

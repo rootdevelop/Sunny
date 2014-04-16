@@ -69,7 +69,7 @@
                Stretch="Uniform" />
 
         <Grid Grid.Row="0">
-            <Image Source="ms-appx:///Assets/SunnyText.png"
+            <Image Source="ms-appx:///Assets/SunnyApp_SunnyAppText.png"
                    Height="100" />
         </Grid>
 

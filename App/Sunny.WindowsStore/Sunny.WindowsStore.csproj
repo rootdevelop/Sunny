@@ -14,9 +14,13 @@
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>Sunny.WindowsStore_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>Sunny.WindowsStore_StoreKey.pfx</PackageCertificateKeyFile>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>7C0E7ABE0DD84CAB0AD4BB47CF8B48BA967AF835</PackageCertificateThumbprint>
+    <AppxBundle>Always</AppxBundle>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -146,7 +150,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="Sunny.WindowsStore_TemporaryKey.pfx" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -167,7 +170,7 @@
     <Content Include="Assets\SunnyApp_620x300.png" />
     <Content Include="Assets\SunnyApp_70x70.scale-100.png" />
     <Content Include="Assets\SunnyApp_800x800 %28org%29.png" />
-    <Content Include="Assets\SunnyText.png" />
+    <Content Include="Assets\SunnyApp_SunnyAppText.png" />
     <Content Include="Assets\Team.jpg" />
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
