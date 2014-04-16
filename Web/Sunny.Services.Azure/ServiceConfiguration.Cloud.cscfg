@@ -3,7 +3,7 @@
   <Role name="Sunny.Services">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=acdemostorage;AccountKey=QgId6DJdTGfdq7V+VA0lKKV9T2ZxWH3Y1X0WQAxqoJLxLhyPAZhhb8mVhYGPR+HSGdbJcPLXlwexr/cWSqdSVw==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>
