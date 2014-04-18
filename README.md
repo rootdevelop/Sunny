@@ -9,7 +9,7 @@ Our solution will be created for Windows 8 and iPad using Xamarin and MvvmCross.
 
 Demo: http://youtu.be/xe6RUPcUaGU
 
-More information can be fouund here: https://2014.spaceappschallenge.org/project/sunny/
+More information can be found here: https://2014.spaceappschallenge.org/project/sunny/
 
 Info: 
   - https://2014.spaceappschallenge.org/about/
